@@ -27,11 +27,18 @@ $sql = "SELECT * FROM id";
 <caption>Teilnehmerliste</caption>
   <tbody>
 	  <tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Vorname</th>
-			<th>Geburtstag</th>
-		</tr>
+		  <th>ID</th>
+		  <th>Name</th>
+		  <th>Vorname</th>
+		  <th>Geburtstag</th>
+		  <th>DMC-Nr.</th>
+		  <th>Verein</th>
+		  <th>Transponder_ID</th>
+		  <th>Klasse</th>
+		  <th>EMail</th>
+		  <th>Car_ID</th>
+		  		  	
+	  </tr>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
