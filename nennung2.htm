@@ -18,41 +18,39 @@
 </nav>
 
 <body>
-        <p style="text-align:center">
-                <b>Anmeldung zum 10. NRW-Cup am 14. Mai 2018 in Mönchengladbach :)</b>
-        </p>
+   <p style="text-align:center">
+   <b>Anmeldung zum 10. NRW-Cup am 14. Mai 2018 in Mönchengladbach :)</b>
+    </p>
 
-        <p style="text-align:center">Die Startgebühr wird am Wettkampftag entrichtet.
-                Anmeldeschluss ist der 12. Mai 2018.</p>
+    <p style="text-align:center">Die Startgebühr wird am Wettkampftag entrichtet.
+    Anmeldeschluss ist der 12. Mai 2018.</p>
 
-        <form id="idForm" method="post" action="nennung.php">
-        <table>
-        <tr>
+    <form id="idForm" method="post" action="nennung.php">
+    
+    <table>
+    <tr>
            <td>Nachname</td>
            <td><input id="idNachname" name="nachname" size="30" placeholder="Nachname (erforderlich)"> *</td>
-                 <td>Vorname</td>
-                 <td><input id="idVorname" name="vorname" size="30" placeholder="Vorname (erforderlich)"> *</td>
-        </tr>
+           <td>Vorname</td>
+           <td><input id="idVorname" name="vorname" size="30" placeholder="Vorname (erforderlich)"> *</td>
+    </tr>
 
-  <tr>
+    <tr>
            <td>Geburtstag</td>
            <td colspan="3"><input id="idGeburtstag" name="geburtstag" type="date"> *</td>
-  </tr>
+    </tr>
 
-  <tr>
+    <tr>
            <td>DMC-Nr.</td>
-                 <td colspan="3"><input id="idDMC" name="dmc" size="6" placeholder="DMC-Nr."></td>
-        </tr>
+           <td colspan="3"><input id="idDMC" name="dmc" size="6" placeholder="DMC-Nr."></td>
+    </tr>
 
-  <tr>
-    <td>Verein</td>
-    <td colspan="3">
-      <select id="idVerein" name="verein">
-        <script>
-        for(var i=0; i<=10; i++)
-        document.write("<option value='" + i + "'>" + vereine[i][0] + "</option>");
-        </script>
-      </select> *</td>
+    <tr>
+           <td>Verein</td>
+           <td colspan="3">
+           <select id="idVerein" name="verein">
+        
+               *</td>
    </tr>
 
    <tr>
@@ -61,15 +59,12 @@
      <td>Car ID</td>
      <td><input id="idCar_ID" name="car_id" size="1"></td>
    </tr>
-<tr>
+       
+   <tr>
      <td>Klasse</td>
      <td colspan="3">
        <select id="idKlasse" name="klasse">
-         <script>
-         for(var i=0; i<=10; i++)
-        document.write("<option value='" + i + "'>" + klasse[i][0] + "</option>");
-        </script>
-      </select> *</td>
+         
   </tr>
 
   <tr>
@@ -80,7 +75,7 @@
   <tr>
     <td>&nbsp;</td>
     <td colspan="3"><input type="submit" value="Absenden">
-      <input type="reset" value="Löschen">
+     <input type="reset" value="Löschen">
    </tr>
 
    <tr>
