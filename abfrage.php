@@ -44,11 +44,7 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	
 <table>
   <tbody>
-	  tr:nth-child(even) { 
-		   background-color: #e4ebf2; 
-		   color: #000;
-	   }
-	   
+	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        <td><?=$row['id']?></td>
