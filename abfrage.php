@@ -74,10 +74,10 @@ $sql = "SELECT * FROM id";
 	<td><?=$row['car_id']?></td>
 	    
 	  </tr>
-    <?php endforeach;?>
+    <?php endforeach;
 	  
 // Die Verbindung wie folgt schließen
-$pdo = null;	  
+$pdo = null;	?>  
   </tbody>
 
 <table>
