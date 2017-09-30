@@ -23,7 +23,7 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Top'";
 ?>
 	
 <table>
-<caption>Teilnehmerliste</caption>
+<caption>Teilnehmerliste Top</caption>
   <tbody>
 	  <tr>
 		  <th>ID</th>
