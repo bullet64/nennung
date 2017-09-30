@@ -51,7 +51,7 @@ foreach ($pdo->query($sql) as $row) {
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg = $array[2].'.'.$array[1].'.'.$array[0];
 			
-      echo "TEST: $erg";
+      
    echo $row['nachname'].", ".$row['vorname'].", ".$erg." <br />";
 }
 $pdo = null;
