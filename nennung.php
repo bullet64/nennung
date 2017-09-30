@@ -10,7 +10,7 @@
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
       $meldedatum = date("d.m.Y, H:i"); 
       	
-      echo "Nachname: "           . $_POST["nachname"] . "<br>";
+      echo "Nachname: "           . htmlspecialchars($_POST["nachname"]) . "<br>";
       echo "Vorname: "            . $_POST["vorname"] . "<br>";
       echo "Geburtstag: "         . $_POST["geburtstag"] . "<br>";
       echo "DMC-Nr.: "            . $_POST["dmc"] . "<br>";
