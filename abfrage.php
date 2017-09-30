@@ -109,11 +109,7 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	  </tr>
     <?php endforeach; ?>
   </tbody>
-<tfoot>
-	
-	
-	
-</tfoot>
+
 <table>
 	
 </body>
