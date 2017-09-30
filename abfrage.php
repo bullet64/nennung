@@ -8,10 +8,6 @@
 	   body    {font-family:Verdana; font-size:11pt; background-color:#f0f0f0; max-width:75em; margin: 0 auto}
 	   td      {font-family:Verdana; font-size:11pt; background-color:#d0d0d0; text-align:left; padding:4px}
 	   table   {width:50%; text-align:center; margin-left:auto; margin-right:auto}
-	   tbody tr:nth-child(even) { 
-		   background-color: #e4ebf2; 
-		   color: #000;
-	   }
 	   
       nav li {
         display: inline;
@@ -48,6 +44,11 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	
 <table>
   <tbody>
+	  tbody tr:nth-child(even) { 
+		   background-color: #e4ebf2; 
+		   color: #000;
+	   }
+	   
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        <td><?=$row['id']?></td>
