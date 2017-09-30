@@ -74,7 +74,7 @@ foreach ($pdo->query($sql) as $row) {
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg = $array[2].'.'.$array[1].'.'.$array[0];
 	       ?>
-       <td><?=$row[$erg]?></td>
+       <td><?=$erg?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
