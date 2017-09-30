@@ -45,7 +45,14 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 $sql = "SELECT nachname, vorname, geburtstag FROM id";
 foreach ($pdo->query($sql) as $row) {
-   echo $row['nachname'].", ".$row['vorname'].", ".$row['geburtstag']." <br />";
+   //Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
+	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+			$datum = $row['geburtstag']; // Geburtsdatum
+			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
+			$erg = $array[2].'.'.$array[1].'.'.$array[0];
+			
+      echo "TEST: $erg";
+   echo $row['nachname'].", ".$row['vorname'].", ".$erg." <br />";
 }
 $pdo = null;
 ?>
