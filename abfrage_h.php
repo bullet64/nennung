@@ -36,6 +36,7 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Hobby' ";
 		  <th>Klasse</th>
 		  <th>EMail</th>
 		  <th>Car_ID</th>
+		  <th>Nenndatum</th>
 		  		  	
 	  </tr>
 	  
@@ -56,16 +57,24 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Hobby' ";
 	<td><?=$erg?></td>
 	
 	<td><?=$row['dmc']?></td>
-	
-	
-	    
 	<td><?=$row['verein']?></td>
-	
-	    
 	<td><?=$row['transponder_id']?></td>
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
+	    
+	<?php
+	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
+	
+			$m_date = $row['meldedatum']; // Meldedatum
+			$date = substr($m_date, 0, -16);
+			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
+			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
+			$uhrzeit = substr($m_date, 11, -7);
+			$ergx = $erg_datum . " " . $uhrzeit;
+		
+	    ?>   
+	<td><?=$ergx?></td> 
 	    
 	  </tr>
     <?php endforeach;
