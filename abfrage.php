@@ -67,7 +67,14 @@ foreach ($pdo->query($sql) as $row) {
        <td><?=$row['id']?></td>
        <td><?=$row['nachname']?></td>
        <td><?=$row['vorname']?></td>
-       <td><?=$row['geburtstag']?></td>
+	    <?php
+	//Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
+	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+			$datum = $row['geburtstag']; // Geburtsdatum
+			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
+			$erg = $array[2].'.'.$array[1].'.'.$array[0];
+	       ?>
+       <td><?=$row[$erg]?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
