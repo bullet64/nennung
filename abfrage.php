@@ -32,10 +32,7 @@
 <nav>
    <ul>
       <li><a href="http://192.168.3.243/nennung/nennung.htm">Home</a></li>
-      <li><a href="http://192.168.3.243/Nennung/abfrage.php">Abfrage</a></li>
-      <li><a href="#">Seite 3</a></li>
-      <li><a href="#">Seite 4</a></li>
-  </ul>
+   </ul>
 </nav>
 
 
