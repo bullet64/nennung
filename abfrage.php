@@ -61,8 +61,8 @@ $sql = "SELECT * FROM id";
 	<?php
 	//Verein aus DB auslesen
 	$vereinsnummer = $row['verein']
-	//$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
-	
+	$pdo = new PDO('mysql:host=localhost;dbname=vereine', 'bullet64', 'xt19Zkl');
+	$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
 	?>
 	    
 	<td><?=$row[$sql2]?></td>
