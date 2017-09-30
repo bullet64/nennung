@@ -61,7 +61,7 @@ $sql = "SELECT * FROM id";
 	<?php
 	
 	//Verein aus DB auslesen
-	var vereinsnummer = $row['verein']
+	$vereinsnummer = $row['verein']
 	$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
 	
 	?>
