@@ -29,7 +29,7 @@
 
       	$statement = $pdo->prepare("INSERT INTO nennung (nachname, vorname, geburtstag) VALUES (?, ?, ?)");
       	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"]));
-	$neue_id = $pdo->lastInsertId();
+	
 	$pdo = null;
 
    ?>
