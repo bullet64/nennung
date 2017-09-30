@@ -2,75 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheet.css">
+	<meta charset="utf-8">
    <title>10. NRW-Cup 2018, Anmeldung</title>
    <style>
-	body    {font-family:Verdana; font-size:11pt; background-color:#f0f0f0; max-width:75em; margin: 0 auto}
-      	td      {font-family:Verdana; font-size:11pt; background-color:#d0d0d0; text-align:left; padding:4px}
-      	table   {width:50%; text-align:center; margin-left:auto; margin-right:auto}
-	  
-	   main {
-	background: white;
-	border-color: #8a9da8;
-	height: 700px;
-	overflow: hidden;
-}
-
-table,
-th,
-td {
-	border-collapse: collapse;
-	padding: 0.3em 0.5em;
-}
-
-table {
-	margin-left: 1em;
-}
-
-th,
-caption {
-	background-color: #666;
-	color: #fff;
-	border: 1px solid #666;
-}
-
-td {
-	background-image: linear-gradient(#f9f9f9, #e3e3e3);
-	border-left: 1px solid #666;
-	border-right: 1px solid #666;
-}
-
-tfoot {
-	border-bottom: 1px solid #666;
-}
-
-caption {
-	font-size: 1.5em;
-	border-radius: 0.5em 0.5em 0 0;
-	padding: 0.5em 0 0 0
-}
-/* 3. und 4. Spalte rechtsbündig */
-
-td:nth-of-type(3),
-td:nth-of-type(4) {
-	text-align: right;
-}
-
-	   
-      nav li {
-        display: inline;
-      }
-      @media screen and (max-width: 60em) {
-        nav li {
-          display: block;
-          width: 50%;
-        }
-      }
-
-      @media only screen and (max-width : 30em) {
-        nav li {
-          width: 100%;
-        }
+	
 
    </style>
 </head>
