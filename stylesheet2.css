@@ -29,15 +29,13 @@ main {
 	overflow: hidden;
 }
 
-th,
-td {
+th {
 	text-align:left;
 	border-collapse: collapse;
 	padding: 0.3em 0.5em;
 }
-table {
-	margin-left: 1em;
-}
+
+
 th,
 caption {
 	background-color: #666;
@@ -57,11 +55,7 @@ caption {
 	border-radius: 0.5em 0.5em 0 0;
 	padding: 0.5em 0 0 0
 }
-/* 3. und 4. Spalte rechtsbündig */
-td:nth-of-type(3),
-td:nth-of-type(4) {
-	text-align: right;
-}
+
 	   
     
 nav li {
