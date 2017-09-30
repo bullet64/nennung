@@ -8,7 +8,7 @@
    <?php
 
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-      $meldedatum = date("F j, Y, g:i a"); 
+      $meldedatum = date("d.m.Y, H:i"); 
       echo $meldedatum;
 	
       echo "Nachname: "           . $_POST["nachname"] . "<br>";
