@@ -27,7 +27,7 @@
 			//Irgendwo kamen zwei führende Punkte her. (..28.08.1964) Mit trim werden die aus dem String entfernt!
 			//$erg2 = trim($erg, ".");
 			//$results_arr[] =  $erg2; // Geburtsdatum in deutsch ausgeben!
-      echo "TEST: +$datum";
+      echo "TEST: $datum";
 
       $statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag) VALUES (?, ?, ?)");
       $statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"]));
