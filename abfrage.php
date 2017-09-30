@@ -60,7 +60,7 @@ $sql = "SELECT * FROM id";
 	
 	<?php
 	//Verein aus DB auslesen
-	$vereinsnummer = $row['verein']
+	$vereinsnummer = ($row['verein'])+1
 	$pdo = new PDO('mysql:host=localhost;dbname=vereine', 'bullet64', 'xt19Zkl');
 	$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
 	?>
