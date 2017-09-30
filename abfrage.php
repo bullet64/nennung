@@ -111,7 +111,7 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
   </tbody>
 <tfoot>
 	
-		<td><b>Deutschland</b> (DE)</td>
+		<b>Deutschland</b> (DE)
 	
 </tfoot>
 <table>
