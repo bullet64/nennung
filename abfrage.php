@@ -26,6 +26,12 @@ $sql = "SELECT * FROM id";
 <table>
 <caption>Teilnehmerliste</caption>
   <tbody>
+	  <tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Vorname</th>
+			<th>Geburtstag</th>
+		</tr>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
