@@ -19,7 +19,7 @@
 
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$sql = "SELECT * FROM id";
+$sql = "SELECT * FROM idWHERE klasse = 'OR8 Hobby' ";
 ?>
 	
 <table>
