@@ -7,7 +7,7 @@
 <body><p>
    <?php
 
-      $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'root', '@bulletproof');
+      $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'x719Zkl');
 
       echo "Nachname: "           . $_POST["nachname"] . "<br>";
       echo "Vorname: "            . $_POST["vorname"] . "<br>";
