@@ -64,3 +64,6 @@ td:nth-of-type(4) {
 }
 	   
     
+nav li {
+      display: inline;
+    }
