@@ -6,12 +6,11 @@ body {
 	margin: 0 auto
 }
 
-td {
-	font-family:Verdana;
-	font-size:11pt;
-	background-color:#d0d0d0;
-	text-align:left;
-	padding:4px
+main {
+	background: white;
+	border-color: #8a9da8;
+	height: 700px;
+	overflow: hidden;
 }
 
 table {
@@ -21,13 +20,17 @@ table {
 	margin-right:auto
 }
 
-
-main {
-	background: white;
-	border-color: #8a9da8;
-	height: 700px;
-	overflow: hidden;
+td {
+	font-family:Verdana;
+	font-size:11pt;
+	background-color:#d0d0d0;
+	text-align:left;
+	padding:4px
+	background-image: linear-gradient(#f9f9f9, #e3e3e3);
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
 }
+
 
 th {
 	text-align:left;
@@ -36,27 +39,19 @@ th {
 }
 
 
-th,
 caption {
 	background-color: #666;
 	color: #fff;
 	border: 1px solid #666;
 }
-td {
-	background-image: linear-gradient(#f9f9f9, #e3e3e3);
-	border-left: 1px solid #666;
-	border-right: 1px solid #666;
-}
+
+
+
 tfoot {
 	border-bottom: 1px solid #666;
 }
-caption {
-	font-size: 1.5em;
-	border-radius: 0.5em 0.5em 0 0;
-	padding: 0.5em 0 0 0
-}
 
-	   
+
     
 nav li {
       display: inline;
