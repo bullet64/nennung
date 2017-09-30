@@ -56,3 +56,8 @@ tfoot {
 nav li {
       display: inline;
     }
+
+tbody tr:nth-child(even) { 
+  background-color: #e4ebf2; 
+  color: #000; 
+}
