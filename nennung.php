@@ -22,7 +22,7 @@
       echo "E-Mail: "             . $_POST["email"] . "<br>";
       echo "Meldedatum: " . $_meldedatum . "<br>";	
    
-	$statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag, dmc, verein, transponder_id, klasse, email, car_id, meldedatum) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+	$statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag, dmc, verein, transponder_id, klasse, email, car_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
       	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"], $_POST["dmc"], $_POST["verein"], $_POST["transponder_id"], $_POST["klasse"], $_POST["email"], $_POST["car_id"]));
 	
 	$statement = $pdo->prepare("INSERT INTO id (meldedatum) VALUES (?)");
