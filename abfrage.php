@@ -59,12 +59,12 @@ $sql = "SELECT * FROM id";
 	<td><?=$row['dmc']?></td>
 	
 	<?php
-	
 	//Verein aus DB auslesen
 	$vereinsnummer = $row['verein']
-	$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
+	//$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
 	
 	?>
+	    
 	<td><?=$row[$sql2]?></td>
 	
 	    
