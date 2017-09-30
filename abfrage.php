@@ -73,7 +73,7 @@ $sql = "SELECT * FROM id";
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
 			$uhrzeit = substr($m_date, 11, -7);
-			$ergx = $erg_datum . $uhrzeit;
+			$ergx = $erg_datum . " " . $uhrzeit;
 		
 	    ?>   
 	<td><?=$ergx?></td>
