@@ -88,6 +88,7 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 ?>
 	
 <table>
+<caption>Teilnehmerliste</caption>
   <tbody>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
