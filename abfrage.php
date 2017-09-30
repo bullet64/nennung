@@ -54,35 +54,28 @@ foreach ($pdo->query($sql) as $row) {
       
    echo $row['nachname'].", ".$row['vorname'].", ".$erg." <br />";
 }
-
-
-
-$sql2 = "SELECT nachname, vorname, geburtstag FROM id";
- 
-$db_erg = mysqli_query( $db_link, $sql2 );
-if ( ! $db_erg )
-{
-  die('Ungültige Abfrage: ' . mysqli_error());
-}
- 
-echo '<table border="1">';
-while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
-{
-  echo "<tr>";
-  echo "<td>". $zeile['id'] . "</td>";
-  echo "<td>". $zeile['nachname'] . "</td>";
-  echo "<td>". $zeile['vorname'] . "</td>";
-  echo "<td>". $zeile['geburtstag'] . "</td>";
-  
-  echo "</tr>";
-}
-echo "</table>";
- 
-mysqli_free_result( $db_erg );
 	
-	$pdo = null;
 	
 ?>
+
+	
+	
+<table>
+  <tbody>
+    <?php foreach ($pdo->query($sql) as $row) : ?>
+    <tr>
+       <td><?=$row['id']?></td>
+       <td><?=$row['nachname']?></td>
+       <td><?=$row['vorname']?></td>
+       <td><?=$row['geburtstag']?></td>
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+<table>
+
+
+	
+	
 	
 </body>
 
