@@ -5,10 +5,7 @@
 	<link rel="stylesheet" href="stylesheet.css">
 	<meta charset="utf-8">
    <title>10. NRW-Cup 2018, Anmeldung</title>
-   <style>
-	
-
-   </style>
+   
 </head>
 
 <body>
