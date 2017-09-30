@@ -58,14 +58,14 @@ $sql = "SELECT * FROM id";
 	
 	<td><?=$row['dmc']?></td>
 	
-	<?php
+	//<?php
 	//Verein aus DB auslesen
 	//$vereinsnummer = ($row['verein'])+1
-	$pdo2 = new PDO('mysql:host=localhost;dbname=vereine', 'bullet64', 'xt19Zkl');
-	$sql2 = "SELECT * FROM vereine WHERE id = 1";
-	?>
+	//$pdo2 = new PDO('mysql:host=localhost;dbname=vereine', 'bullet64', 'xt19Zkl');
+	//$sql2 = "SELECT * FROM vereine WHERE id = 1";
+	//?>
 	    
-	<td><?=$row[$sql2]?></td>
+	<td><?=$row['verein']?></td>
 	
 	    
 	<td><?=$row['transponder_id']?></td>
