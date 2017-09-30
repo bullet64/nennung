@@ -54,7 +54,7 @@ foreach ($pdo->query($sql) as $row) {
       
    echo $row['nachname'].", ".$row['vorname'].", ".$erg." <br />";
 }
-$pdo = null;
+
 
 
 $sql2 = "SELECT nachname, vorname, geburtstag FROM id";
@@ -79,6 +79,8 @@ while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
 echo "</table>";
  
 mysqli_free_result( $db_erg );
+	
+	$pdo = null;
 	
 ?>
 	
