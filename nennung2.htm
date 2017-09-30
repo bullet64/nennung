@@ -65,50 +65,43 @@
    <tr>
      <td>Transponder ID</td>
      <td><input id="idTransponder_ID"
-                pattern="^[0-9]{7}$" name="transponder_id" size="8" type="number" required> *</td>
+          pattern="^[0-9]{7}$" name="transponder_id" size="8" type="number" required> *</td>
      </tr>
        
        
-       <tr>
+    <tr>
        <td>Car ID</td>
-     <td><input id="idCar_ID"
+       <td><input id="idCar_ID"
            pattern="^[0-9]{1}$" name="car_id" size="10" type="number" required> *</td>
-   </tr>
+    </tr>
        
-   <tr>
-     <td>Klasse</td>
-     <td colspan="3">
+    <tr>
+       <td>Klasse</td>
+       <td colspan="3">
        <input type="text" name="klasse" list="klassen" required>
-  <datalist id="klassen">
-    <option value="OR8 Hobby" />
-    <option value="OR8 Top" />
-    
-  </datalist>
-
-         
-  </tr>
-
-  <tr>
-    <td>EMail</td>
-    <td colspan="3"><input id="idEMail" name="email" size="30" type="email" required> *</td>
-  </tr>
-
-  <tr>
-    <td>&nbsp;</td>
-    <td colspan="3"><input type="submit" value="Absenden">
-     <input type="reset" value="Löschen">
+         <datalist id="klassen">
+         <option value="OR8 Hobby" />
+         <option value="OR8 Top" />
+         </datalist>
    </tr>
 
    <tr>
-    <td colspan="4">Pflichtfelder mit *, Name, Vorname und EMail müssen ausgefüllt werden<br>
-    Geburtstag, Verein und Klasse müssen richtig gewählt werden</td>
+       <td>EMail</td>
+       <td colspan="3"><input id="idEMail" name="email" size="30" type="email" required> *</td>
+  </tr>
+
+  <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
    </tr>
-   </table>
 
-   </form>
+   <tr>
+      <td colspan="4">Pflichtfelder mit *, Name, Vorname und EMail müssen ausgefüllt werden<br>
+      Geburtstag, Verein und Klasse müssen richtig gewählt werden</td>
+   </tr>
+ </table>
 
-
-
-  
+ </form> 
 </body>
 </html>
