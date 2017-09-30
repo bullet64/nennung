@@ -109,6 +109,16 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	  </tr>
     <?php endforeach; ?>
   </tbody>
+<tfoot>
+	<tr>
+		<td><b>Deutschland</b> (DE)</td>
+		<td>Berlin</td>
+		<td><b>357.340</b>
+		</td>
+		<td><b>80,767</b>
+		</td>
+	</tr>
+</tfoot>
 <table>
 	
 </body>
