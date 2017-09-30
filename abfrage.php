@@ -42,6 +42,14 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	    ?>
        
 	<td><?=$erg?></td>
+	
+	<td><?=$row['dmc']?></td>   
+	<td><?=$row['verein']?></td>
+	<td><?=$row['transponder_id']?></td>
+	<td><?=$row['klasse']?></td>
+	<td><?=$row['email']?></td>
+	<td><?=$row['car_id']?></td>
+	    
 	  </tr>
     <?php endforeach; ?>
   </tbody>
