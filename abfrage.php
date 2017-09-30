@@ -54,21 +54,26 @@ $sql = "SELECT * FROM id ORDER BY klasse";
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg = $array[2].'.'.$array[1].'.'.$array[0];
 	    ?>
-       
-	<td><?=$erg?></td>
+    	<td><?=$erg?></td>
 	
+	    
 	<td><?=$row['dmc']?></td>
-	
-	
-	    
 	<td><?=$row['verein']?></td>
-	
-	    
 	<td><?=$row['transponder_id']?></td>
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
-	<td><?=$row['meldedatum']?></td>
+	    
+	    
+	 <?php
+	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
+	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+			$m_date = $row['meldedatum']; // Meldedatum
+			$date = substr($m_date, 0, -16)
+			$array = explode("-",$date); //Datum zerlegen (2013-08-22)
+			$erg2 = $array[2].'.'.$array[1].'.'.$array[0];
+	    ?>   
+	<td><?=$erg2?></td>
 	    
 	  </tr>
     <?php endforeach;
