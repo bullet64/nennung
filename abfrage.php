@@ -67,9 +67,9 @@ $sql = "SELECT * FROM id";
 	    
 	 <?php
 	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
-	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+	
 			$m_date = $row['meldedatum']; // Meldedatum
-			$date = substr($m_date, 0, -16)
+			$date = substr($m_date, 0, -16);
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$ergx = $teile[2].'.'.$teile[1].'.'.$teile[0];
 	    ?>   
