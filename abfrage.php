@@ -57,7 +57,7 @@ foreach ($pdo->query($sql) as $row) {
 $pdo = null;
 
 
-$sql = "SELECT * FROM id";
+$sql = "SELECT nachname, vorname, geburtstag FROM id";
  
 $db_erg = mysqli_query( $db_link, $sql );
 if ( ! $db_erg )
