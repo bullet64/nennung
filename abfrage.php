@@ -31,7 +31,7 @@ $sql = "SELECT * FROM id";
 		  <th>Name</th>
 		  <th>Vorname</th>
 		  <th>Geburtstag</th>
-		  <th>DMC-Nr.</th>
+		  <th>DMC</th>
 		  <th>Verein</th>
 		  <th>Transponder_ID</th>
 		  <th>Klasse</th>
