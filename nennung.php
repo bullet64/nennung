@@ -19,7 +19,7 @@
       echo "Klasse: "             . $_POST["klasse"] . "<br>";
       echo "E-Mail: "             . $_POST["email"] . "<br>";
    
-	statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag) VALUES (?, ?, ?)");
+	$statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag) VALUES (?, ?, ?)");
       	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"]));
 	
 	$pdo = null;
