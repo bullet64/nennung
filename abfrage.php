@@ -44,7 +44,7 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
 	
 <table>
   <tbody>
-	  tbody tr:nth-child(even) { 
+	  tr:nth-child(even) { 
 		   background-color: #e4ebf2; 
 		   color: #000;
 	   }
