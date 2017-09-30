@@ -20,7 +20,7 @@
 
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$sql = "SELECT * FROM id ORDER BY klasse";
+$sql = "SELECT * FROM id";
 ?>
 	
 <table>
@@ -70,8 +70,8 @@ $sql = "SELECT * FROM id ORDER BY klasse";
 	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
 			$m_date = $row['meldedatum']; // Meldedatum
 			$date = substr($m_date, 0, -16)
-			$array = explode("-",$date); //Datum zerlegen (2013-08-22)
-			$erg2 = $array[2].'.'.$array[1].'.'.$array[0];
+			$array2 = explode("-",$date); //Datum zerlegen (2013-08-22)
+			$erg2 = $array2[2].'.'.$array2[1].'.'.$array2[0];
 	    ?>   
 	<td><?=$erg2?></td>
 	    
