@@ -42,7 +42,7 @@
          ["Rasenracer"],
          ["Stoppelhopser Oberhausen"],
          ["MFK Kürten"],
-   ["ohne Verein"]
+         ["ohne Verein"]
         ]
 
         //Array Klasse
@@ -196,32 +196,22 @@
     <td>&nbsp;</td>
     <td colspan="3"><input type="submit" value="Absenden">
       <input type="reset" value="Löschen">
+   </tr>
 
-
-      <form method='GET' action='http://192.168.3.243/abfrage.php'>
-  <input type='button' value='go'>
-</form>
-
-  </tr>
-
-<tr>
+   <tr>
     <td colspan="4">Pflichtfelder mit *, Name, Vorname und EMail müssen ausgefüllt werden<br>
     Geburtstag, Verein und Klasse müssen richtig gewählt werden</td>
-  </tr>
-</table>
-</form>
+   </tr>
+   </table>
+
+   </form>
 
  <script src="eh.js"></script>
   <script>
       meinHandler("idForm", "submit", function(e) { return abgesandt(e); } );
   </script>
 
-  <script src="eh.js"></script>
-  <script>
-      meinHandler("idForm", "button", function(e) { return abgesandt(e); } );
-  </script>
-
-
+  
 </body>
 </html>
 
