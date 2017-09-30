@@ -56,15 +56,28 @@ $sql = "SELECT * FROM id";
        
 	<td><?=$erg?></td>
 	
-	<td><?=$row['dmc']?></td>   
-	<td><?=$row['verein']?></td>
+	<td><?=$row['dmc']?></td>
+	
+	<?php
+	
+	//Verein aus DB auslesen
+	var vereinsnummer = $row['verein']
+	$sql2 = "SELECT * FROM vereine WHERE id = $vereinsnummer";
+	
+	?>
+	<td><?=$row[$sql2]?></td>
+	
+	    
 	<td><?=$row['transponder_id']?></td>
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
 	    
 	  </tr>
-    <?php endforeach; ?>
+    <?php endforeach;?>
+	  
+// Die Verbindung wie folgt schließen
+$pdo = null;	  
   </tbody>
 
 <table>
