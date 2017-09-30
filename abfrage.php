@@ -71,7 +71,7 @@ $sql = "SELECT * FROM id";
 			$m_date = $row['meldedatum']; // Meldedatum
 			$date = substr($m_date, 0, -16)
 			$arrayx = explode("-",$date); //Datum zerlegen (2013-08-22)
-			$ergx = $arrayx[2].'.'.$arrayx[1].'.'.$arrayx[0];
+			//$ergx = $arrayx[2].'.'.$arrayx[1].'.'.$arrayx[0];
 	    ?>   
 	<td><?=$ergx?></td>
 	    
