@@ -20,7 +20,7 @@
 
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$sql = "SELECT id, nachname, vorname, geburtstag FROM id";
+$sql = "SELECT * FROM id";
 ?>
 	
 <table>
