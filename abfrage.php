@@ -37,6 +37,7 @@ $sql = "SELECT * FROM id ORDER BY klasse";
 		  <th>Klasse</th>
 		  <th>EMail</th>
 		  <th>Car_ID</th>
+		  <th>Nenndatum</th>
 		  		  	
 	  </tr>
 	  
@@ -67,6 +68,7 @@ $sql = "SELECT * FROM id ORDER BY klasse";
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
+	<td><?=$row['meldedatum']?></td>
 	    
 	  </tr>
     <?php endforeach;
