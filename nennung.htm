@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>10. NRW-Cup 2018, Anmeldung</title>
+   <style>
+      body    {font-family:Verdana; font-size:11pt; background-color:#f0f0f0; max-width:75em; margin: 0 auto}
+      td      {font-family:Verdana; font-size:11pt; background-color:#d0d0d0; text-align:left; padding:4px}
+      table   {width:50%; text-align:center; margin-left:auto; margin-right:auto}
+        nav li {
+      display: inline;
+    }
+
+    @media screen and (max-width: 60em) {
+      nav li {
+        display: block;
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width : 30em) {
+      nav li {
+        width: 100%;
+    }
+
+   </style>
+
+
+   <script>
+      var heute = new Date();
+      var jahr = heute.getFullYear();
+      // Result = 2017-09-11
+      var reDatum = /^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/;
+      var reTransponderID = /^[0-9]{7}$/;
+      var reCarID = /^[0-9]{1}$/;
+      var redmc = /^[0-9]{4}$/;
+      var reEMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+  //Array Vereine
+        var vereine = [
+         ["NitroManiacs"],
+         ["Rasenracer"],
+         ["Stoppelhopser Oberhausen"],
+         ["MFK Kürten"],
+   ["ohne Verein"]
+        ]
+
+        //Array Klasse
+        var klasse = [
+                ["OR8 Hobby"],
+                ["OR8 Top"]
+        ]
+
+ function abgesandt(e) {
+         var fehler = false;
+
+         // Eingaben ermitteln
+         var nachname = document.getElementById("idNachname").value;
+         var vorname  = document.getElementById("idVorname").value;
+         var geburtstag  = document.getElementById("idGeburtstag").value;
+         var dmc  = document.getElementById("idDMC").value;
+         var verein  = document.getElementById("idVerein").value;
+         var transponder_id  = document.getElementById("idTransponder_ID").value;
+         var car_id  = document.getElementById("idCar_ID").value;
+         var klasse  = document.getElementById("idKlasse").value;
+         var email    = document.getElementById("idEMail").value;
+
+         // Pflichtfelder
+         if(nachname == "" || vorname == "")
+         {
+            alert("Bitte alle Felder mit * ausfüllen");
+            fehler = true;
+         }
+
+         // RegEx Datum
+         if(geburtstag.match(reDatum)) {}
+         else {
+           alert("Bitte alle Felder mit * ausfüllen");
+           fehler = true;
+         }
+
+         // RegEx Transponder-ID
+         if(transponder_id.match(reTransponderID)) {}
+         else {
+           alert("TransponderID = 1234567");
+           fehler = true;
+         }
+
+         // RegEx Car-ID
+         if(car_id.match(reCarID)) {}
+         else {
+           alert("CarID = 1");
+           fehler = true;
+         }
+
+         // RegEx DMC
+         if(dmc.match(redmc)) {}
+         else {
+           alert("DMC-Nr. = 1234");
+           fehler = true;
+         }
+
+         // RegEx email
+         if(email.match(reEMail)) {}
+         else {
+           alert("Bitte korrekte EMail-Adresse eingeben!");
+           fehler = true;
+         }
+
+         // Bei Fehler: Absenden verhindern
+         if(fehler)
+         {
+            if(e.preventDefault)
+               e.preventDefault();
+            else
+               window.event.returnValue = false;
+            return false;
+         }
+         else
+            return true;
+      }
+
+   </script>
+</head>
+
+<nav>
+   <ul>
+      <li><a href="http://192.168.3.243/nennung.htm">Home</a></li>
+      <li><a href="http://192.168.3.243/abfrage.php">Abfrage</a></li>
+      <li><a href="#">Seite 3</a></li>
+      <li><a href="#">Seite 4</a></li>
+  </ul>
+</nav>
+
+<body>
+        <p style="text-align:center">
+                <b>Anmeldung zum 10. NRW-Cup am 14. Mai 2018 in Mönchengladbach :)</b>
+        </p>
+
+        <p style="text-align:center">Die Startgebühr wird am Wettkampftag entrichtet.
+                Anmeldeschluss ist der 12. Mai 2018.</p>
+
+        <form id="idForm" method="post" action="nennung.php">
+        <table>
+        <tr>
+           <td>Nachname</td>
+           <td><input id="idNachname" name="nachname" size="30" placeholder="Nachname (erforderlich)"> *</td>
+                 <td>Vorname</td>
+                 <td><input id="idVorname" name="vorname" size="30" placeholder="Vorname (erforderlich)"> *</td>
+        </tr>
+
+  <tr>
+           <td>Geburtstag</td>
+           <td colspan="3"><input id="idGeburtstag" name="geburtstag" type="date"> *</td>
+  </tr>
+
+  <tr>
+           <td>DMC-Nr.</td>
+                 <td colspan="3"><input id="idDMC" name="dmc" size="6" placeholder="DMC-Nr."></td>
+        </tr>
+
+  <tr>
+    <td>Verein</td>
+    <td colspan="3">
+      <select id="idVerein" name="verein">
+        <script>
+        for(var i=0; i<=10; i++)
+        document.write("<option value='" + i + "'>" + vereine[i][0] + "</option>");
+        </script>
+      </select> *</td>
+   </tr>
+
+   <tr>
+     <td>Transponder ID</td>
+     <td><input id="idTransponder_ID" name="transponder_id" size="8"></td>
+     <td>Car ID</td>
+     <td><input id="idCar_ID" name="car_id" size="1"></td>
+   </tr>
+<tr>
+     <td>Klasse</td>
+     <td colspan="3">
+       <select id="idKlasse" name="klasse">
+         <script>
+         for(var i=0; i<=10; i++)
+        document.write("<option value='" + i + "'>" + klasse[i][0] + "</option>");
+        </script>
+      </select> *</td>
+  </tr>
+
+  <tr>
+    <td>EMail</td>
+    <td colspan="3"><input id="idEMail" name="email" size="30"> *</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+
+
+      <form method='GET' action='http://192.168.3.243/abfrage.php'>
+  <input type='button' value='go'>
+</form>
+
+  </tr>
+
+<tr>
+    <td colspan="4">Pflichtfelder mit *, Name, Vorname und EMail müssen ausgefüllt werden<br>
+    Geburtstag, Verein und Klasse müssen richtig gewählt werden</td>
+  </tr>
+</table>
+</form>
+
+ <script src="eh.js"></script>
+  <script>
+      meinHandler("idForm", "submit", function(e) { return abgesandt(e); } );
+  </script>
+
+  <script src="eh.js"></script>
+  <script>
+      meinHandler("idForm", "button", function(e) { return abgesandt(e); } );
+  </script>
+
+
+</body>
+</html>
+
