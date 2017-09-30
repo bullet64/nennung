@@ -110,9 +110,9 @@ $sql = "SELECT id, nachname, vorname, geburtstag FROM id";
     <?php endforeach; ?>
   </tbody>
 <tfoot>
-	<tr>
+	
 		<td><b>Deutschland</b> (DE)</td>
-	</tr>
+	
 </tfoot>
 <table>
 	
