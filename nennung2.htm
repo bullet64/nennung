@@ -49,7 +49,7 @@
            <td>Verein</td>
            <td colspan="3">
            
-        <input type="text" name="verein" list="vereine">
+        <input type="text" name="verein" list="vereine" required>
   <datalist id="vereine">
     <option value="NitroManiacs" />
     <option value="Stoppelhopser Oberhausen" />
@@ -69,7 +69,13 @@
    <tr>
      <td>Klasse</td>
      <td colspan="3">
-       <select id="idKlasse" name="klasse" required>
+       <input type="text" name="klasse" list="klassen" required>
+  <datalist id="klassen">
+    <option value="OR8 Hobby" />
+    <option value="OR8 Top" />
+    
+  </datalist>
+</input>
          
   </tr>
 
