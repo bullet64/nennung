@@ -21,3 +21,7 @@ body {
      margin-right:auto
      }
     
+nav li {
+      display: inline;
+    }
+
