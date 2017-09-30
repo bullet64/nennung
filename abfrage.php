@@ -57,9 +57,9 @@ foreach ($pdo->query($sql) as $row) {
 $pdo = null;
 
 
-$sql = "SELECT nachname, vorname, geburtstag FROM id";
+$sql2 = "SELECT nachname, vorname, geburtstag FROM id";
  
-$db_erg = mysqli_query( $db_link, $sql );
+$db_erg = mysqli_query( $db_link, $sql2 );
 if ( ! $db_erg )
 {
   die('Ungültige Abfrage: ' . mysqli_error());
