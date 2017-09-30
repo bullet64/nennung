@@ -10,7 +10,7 @@ td {
 	font-family:Verdana;
 	font-size:11pt;
 	background-color:#d0d0d0;
-	text-align:left;
+	text-align:center;
 	padding:4px
 }
 
@@ -28,10 +28,10 @@ main {
 	height: 700px;
 	overflow: hidden;
 }
-table,
+
 th,
 td {
-	text-align:center;
+	text-align:left;
 	border-collapse: collapse;
 	padding: 0.3em 0.5em;
 }
