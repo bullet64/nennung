@@ -13,7 +13,7 @@
    <ul>
       	<li><a href="http://192.168.3.243/nennung/nennung.htm">Home</a></li>
 	<li><a href="http://192.168.3.243/nennung/abfrage.php">Teilnehmerliste</a></li>
-      	//<li><a href="http://192.168.3.243/nennung/abfrage_h.php">Klasse Hobby</a></li>
+      	<li><a href="http://192.168.3.243/nennung/abfrage_h.php">Klasse Hobby</a></li>
       	<li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
    </ul>
 </nav>
