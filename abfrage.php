@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>10. NRW-Cup 2018, Anmeldung</title>
+   <style>
+      body    {font-family:Verdana; font-size:11pt; background-color:#f0f0f0; max-width:75em; margin: 0 auto}
+      td      {font-family:Verdana; font-size:11pt; background-color:#d0d0d0; text-align:left; padding:4px}
+      table   {width:50%; text-align:center; margin-left:auto; margin-right:auto}
+
+      nav li {
+        display: inline;
+      }
+      @media screen and (max-width: 60em) {
+        nav li {
+          display: block;
+          width: 50%;
+        }
+      }
+
+      @media only screen and (max-width : 30em) {
+        nav li {
+          width: 100%;
+        }
+
+   </style>
+</head>
+
+<body>
+
+<nav>
+   <ul>
+      <li><a href="http://192.168.3.243/nennung/nennung.htm">Home</a></li>
+      <li><a href="http://192.168.3.243/Nennung/abfrage.php">Abfrage</a></li>
+      <li><a href="#">Seite 3</a></li>
+      <li><a href="#">Seite 4</a></li>
+  </ul>
+</nav>
+
+
+
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+
+$sql = "SELECT nachname, vorname, geburtstag FROM id";
+foreach ($pdo->query($sql) as $row) {
+   echo $row['nachname'].", ".$row['vorname'].", ".$row['geburtstag']." <br />";
+}
+$pdo = null;
+?>
+
+
+</body>
+
+</html>
+
