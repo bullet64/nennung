@@ -46,9 +46,6 @@ foreach ($pdo->query($sql) as $row) {
    $abfrage[] = $row['vorname']." ".$row['nachname'];
    
 
-  $filename = 'test.txt';
-
-
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
 if (is_writable($filename)) {
 
