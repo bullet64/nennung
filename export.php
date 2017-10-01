@@ -9,7 +9,7 @@ foreach ($pdo->query($sql) as $row) {
    $abfrage[] = $row['vorname']." ".$row['nachname']."<br />";
 }
 
-echo $abfrage[0][0];
+echo $abfrage[0][1];
 
 
 //DB close
