@@ -81,7 +81,7 @@ if (is_writable($filename)) {
 
 
 header ("Content-Type: application/download");
-header ("Content-Disposition: attachment; filename=$yourfile");
+header ("Content-Disposition: attachment; filename=$filename");
 header("Content-Length: " . filesize("$filename"));
 $fp = fopen("$filename", "r");
 fpassthru($fp);
