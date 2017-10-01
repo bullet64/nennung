@@ -42,7 +42,7 @@ $sql = "SELECT * FROM id";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
-   echo $row['vorname']." ".$row['nachname']."<br />";
+   echo $row['vorname'].";".$row['nachname']."<br />";
    $abfrage[] = $row['vorname']." ".$row['nachname'];
     
    
