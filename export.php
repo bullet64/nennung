@@ -14,7 +14,7 @@ if (is_writable($filename)) {
     // Wir öffnen $filename im "Anhänge" - Modus.
     // Der Dateizeiger befindet sich am Ende der Datei, und
     // dort wird $somecontent später mit fwrite() geschrieben.
-    if (!$handle = fopen($filename, "a")) {
+    if (!$handle = fopen($filename, "w")) {
          print "Kann die Datei $filename nicht öffnen";
          exit;
     }
