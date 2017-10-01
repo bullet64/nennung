@@ -1,6 +1,6 @@
 <?php
 // Array erzeugen
-$sqlabfrage = (array);
+$sqlabfrage = array();
 
 //DB-Aufruf
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
