@@ -1,4 +1,8 @@
 <?php
+header ("Content-Type: application/download");
+header ("Content-Disposition: attachment; filename=$filename");
+header("Content-Length: " . filesize("$filename"));
+
 // Daten Export im CSV-Format für RC Timing (http://www.rc-timing.ch/). Trennzeichen ";"
 
 
