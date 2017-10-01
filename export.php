@@ -3,7 +3,7 @@
 //Definitionen
 $abfrage = array();
 $filename = 'export.csv';
-$header = "Name;Vorname";
+$header = array("Name","Vorname");
 
 
 //Header in Datei schreiben
