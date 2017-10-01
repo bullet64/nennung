@@ -38,6 +38,8 @@ if (is_writable($filename)) {
    
 }
 
+endforeach;
+
 echo $abfrage[0][1];
 
 
