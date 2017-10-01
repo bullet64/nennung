@@ -9,6 +9,9 @@ foreach ($pdo->query($sql) as $row) {
    $abfrage[] = $row['vorname'].",".$row['nachname']."<br />";
 }
 
+echo $abfrage[2][2];
+
+
 //DB close
 $pdo = null;
 ?>
