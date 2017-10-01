@@ -87,7 +87,7 @@ $fp = fopen("$filename", "r");
 fpassthru($fp);
 fclose($fp);
 
-print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
+//print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
 
 //DB close
 $pdo = null;
