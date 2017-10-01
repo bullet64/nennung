@@ -44,6 +44,7 @@ $sql = "SELECT * FROM id";
 foreach ($pdo->query($sql) as $row) {
    echo $row['vorname']." ".$row['nachname']."<br />";
    $abfrage[] = $row['vorname']." ".$row['nachname'];
+    $comma = implode(";", $abfrage);
    
 
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
@@ -58,7 +59,7 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    if (!fputcsv($handle, $abfrage, ';', chr(127))) {
+    if (!fputcsv($handle, $comma)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
