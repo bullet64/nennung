@@ -3,7 +3,7 @@
 //Definitionen
 $abfrage = array();
 $filename = 'test.txt';
-$header = "Transponder Nr 1;Transponder Nr 2;Liz.-Nr;Name;Vorname;Club;Geburtstag;Aktive Frequenz;Synthesizer;Klasse;EMail;CarId 1;CarId 2;Land;Payment";
+$header = array("Name","Vorname");
 
 
 //Header in Datei schreiben
