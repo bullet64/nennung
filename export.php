@@ -16,8 +16,7 @@ $header = array("Name","Vorname");
     // Wir öffnen $filename im "Schreiben" - Modus. Datei wird komplett überschrieben!
     // Der Dateizeiger befindet sich am Anfang der Datei, und
     // dort wird $header später mit fputcsv() geschrieben.
-    //if (!$handle = fopen($filename, "w")) {
-      if (!$handle = fopen("/home/frank/$filename", "w")) {  
+     if (!$handle = fopen($filename, "w")) {
          print "Kann die Datei $filename nicht öffnen";
          exit;
     }
