@@ -66,7 +66,7 @@ if (is_writable($filename)) {
         exit;
     }
 
-    print "Fertig, in Datei $filename wurde $abfrage geschrieben";
+    //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
     fclose($handle);
 
