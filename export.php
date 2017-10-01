@@ -23,7 +23,7 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    if (!fwrite($handle, $abfrage)) {
+    if (!fputcsv($handle, $abfrage)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
