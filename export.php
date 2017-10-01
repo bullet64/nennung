@@ -10,14 +10,11 @@ $header = array("Name","Vorname");
 
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
-if (is_writable($filename)) {
+    if (is_writable($filename)) {
 
     // Wir öffnen $filename im "Schreiben" - Modus. Datei wird komplett überschrieben!
     // Der Dateizeiger befindet sich am Anfang der Datei, und
     // dort wird $header später mit fputcsv() geschrieben.
-    header ("Content-Type: application/download");
-    header ("Content-Disposition: attachment; filename=$filename");
-    header("Content-Length: " . filesize("$filename"));
     if (!$handle = fopen($filename, "w")) {
          print "Kann die Datei $filename nicht öffnen";
          exit;
