@@ -6,7 +6,7 @@ $namen = array();
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $query = "SELECT * FROM id";
 
-while($row = mysql_fetch_array($qry))
+while($row = mysql_fetch_array($query))
 {
   $namen[] = $row['vorname'];
   }
