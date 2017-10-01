@@ -26,7 +26,7 @@ if (is_writable($filename)) {
         exit;
     }
 
-    print "Fertig, in Datei $filename wurde $header geschrieben"; // Kann später weg!
+    // print "Fertig, in Datei $filename wurde $header geschrieben"; // Kann später weg!
 
     fclose($handle);
 
@@ -43,7 +43,7 @@ $sql = "SELECT * FROM id";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
-   echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
+   //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
     $abfrage[] = $row['vorname'].";".$row['nachname']; 
@@ -77,7 +77,7 @@ if (is_writable($filename)) {
     $abfrage = array();
 }
 
-
+print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
 
 //DB close
 $pdo = null;
