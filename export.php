@@ -8,7 +8,7 @@ $sql = "SELECT * FROM id";
 
 while($row = mysql_fetch_array($qry))
 {
-  $sqlabfrage[] = $row['vorname];
+  $sqlabfrage[] = $row['vorname'];
   }
   
   echo $sqlabfrage[0];
