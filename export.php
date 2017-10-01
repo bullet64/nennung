@@ -2,14 +2,11 @@
 
 //Definitionen
 $abfrage = array();
-$filename = 'test.txt';
+$filename = 'export.csv';
 $header = array("Name","Vorname");
 
 
 //Header in Datei schreiben
-
-//Datei erzeugen
-$datei = fopen("test.txt","W");
 
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
 if (is_writable($filename)) {
