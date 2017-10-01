@@ -25,7 +25,8 @@
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $sql = "SELECT * FROM id";
 ?>
-	
+
+<center>
 <table>
 <caption>Teilnehmerliste</caption>
   <tbody>
@@ -89,7 +90,7 @@ $pdo = null;	?>
   </tbody>
 
 <table>
-	
+	</center>	
 </body>
 
 </html>
