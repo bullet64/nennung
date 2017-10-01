@@ -1,14 +1,18 @@
 <?php
+// Array erzeugen
+$sqlabfrage = (array);
+
 //DB-Aufruf
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-
 $sql = "SELECT * FROM id";
-$sql1 = mysql_query($sql);
 
-while ($row=mysql_fetch_assoc($sql1)){
-  echo "$row[id],$row[vorname],$row[nachname]<br>\n;
-
-
+while($row = mysql_fetch_array($qry))
+{
+  $sqlabfrage[] = $row['vorname];
+  }
+  
+  echo $sqlabfrage[0];
+  echo $sqlabfrage[34];
 
 //DB close
 $pdo = null;
