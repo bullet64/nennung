@@ -1,18 +1,13 @@
 <?php
-// Array erzeugen
-
 
 //DB-Aufruf
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$namen = array();
-$query = "SELECT * FROM id";
 
-while($row = mysql_fetch_array($query)) {
-  $namen[] = $row['vorname'];
-  }
-  
-  echo $namen[0];
-  echo $namen[34];
+$sql = "SELECT * FROM id WHERE id = 1";
+foreach ($pdo->query($sql) as $row) {
+   echo $row['vorname']." ".$row['nachname']."<br />";
+   echo "E-Mail: ".$row['email']."<br /><br />";
+}
 
 //DB close
 $pdo = null;
