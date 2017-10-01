@@ -85,6 +85,7 @@ header ("Content-Disposition: attachment; filename=$yourfile");
 header("Content-Length: " . filesize("$filename"));
 $fp = fopen("$filename", "r");
 fpassthru($fp);
+fclose($fp);
 
 print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
 
