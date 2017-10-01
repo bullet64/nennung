@@ -1,13 +1,15 @@
 <?php
 
+$abfrage = array();
+
 //DB-Aufruf
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 $sql = "SELECT * FROM id";
 foreach ($pdo->query($sql) as $row) {
    echo $row['vorname']." ".$row['nachname']."<br />";
-   $abfrage = $row['vorname']." ".$row['nachname'];
-   echo $abfrage;
+   $abfrage[] = $row['vorname']." ".$row['nachname'];
+   
 
   $filename = 'test.txt';
 
@@ -36,7 +38,7 @@ if (is_writable($filename)) {
 } else {
     print "Die Datei $filename ist nicht schreibbar";
 }
-   
+   $abfrage = array();
 }
 
 
