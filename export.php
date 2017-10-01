@@ -80,6 +80,12 @@ if (is_writable($filename)) {
 
 print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
 
+header ("Content-Type: application/download");
+header ("Content-Disposition: attachment; filename=$yourfile");
+header("Content-Length: " . filesize("$filename"));
+$fp = fopen("$filename", "r");
+fpassthru($fp);
+
 //DB close
 $pdo = null;
 ?>
