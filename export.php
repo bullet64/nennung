@@ -4,7 +4,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $sql = "SELECT * FROM id WHERE";
 
 //Header schreiben
-$csv_output = JText::_('Transponder Nr 1;Transponder Nr 2;Liz.-Nr;Name;Vorname;Club;Geburtstag;Aktive Frequenz;Synthesizer;Klasse;EMail;CarId 1;CarId 2;Land;Payment');
+//$csv_output = JText::_('Transponder Nr 1;Transponder Nr 2;Liz.-Nr;Name;Vorname;Club;Geburtstag;Aktive Frequenz;Synthesizer;Klasse;EMail;CarId 1;CarId 2;Land;Payment');
 
 
 
