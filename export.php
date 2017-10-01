@@ -8,8 +8,8 @@ $sql = "SELECT * FROM id WHERE";
 //	array('Transponder Nr 1', 'Transponder Nr 2', 'Liz.-Nr.', 'Name', 'Vorname', 'Club', 'Geburtstag', 'Aktive Frequenz', 'Synthesizer', 'Klasse', 'EMail', 'CarId 1', 'CarId 2', 'Land', 'Payment'),
 //	);
 
-$out = fopen('php://output', 'w');
-fputcsv($out, array('this','is some', 'csv "stuff", you know.'));
+$out = fopen('php://output', 'w'); // $fp = fopen('file.csv', 'w');
+fputcsv($out, $sql));
 fclose($out);
 
 //Schreiben der Daten
