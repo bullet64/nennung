@@ -7,6 +7,7 @@ $sql = "SELECT * FROM id";
 foreach ($pdo->query($sql) as $row) {
    echo $row['vorname']." ".$row['nachname']."<br />";
    $abfrage = $row['vorname']." ".$row['nachname'];
+   echo $abfrage;
 
   $filename = 'test.txt';
 
