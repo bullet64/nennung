@@ -4,9 +4,9 @@
 
 //Definitionen
 $abfrage = array();
-//$filename = 'export.csv';
+$filename = 'export.csv';
 $header = array("Name","Vorname");
-$filename = tmpfile();
+
 
 
 //Header in Datei schreiben
