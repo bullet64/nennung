@@ -7,11 +7,11 @@ $sql = "SELECT * FROM id";
 foreach ($pdo->query($sql) as $row) {
    echo $row['vorname']." ".$row['nachname']."<br />";
    $abfrage[] = $row['vorname']." ".$row['nachname']."<br />";
-   
-   //in Datei
-   $filename = 'test.txt';
-   
-   // Sichergehen, dass die Datei existiert und beschreibbar ist.
+
+  $filename = 'test.txt';
+
+
+// Sichergehen, dass die Datei existiert und beschreibbar ist.
 if (is_writable($filename)) {
 
     // Wir öffnen $filename im "Anhänge" - Modus.
@@ -21,20 +21,21 @@ if (is_writable($filename)) {
          print "Kann die Datei $filename nicht öffnen";
          exit;
     }
-   
+
     // Schreibe $somecontent in die geöffnete Datei.
     if (!fwrite($handle, $abfrage)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
-   
-   print "Fertig, in Datei $filename wurde $abfrage geschrieben";      
-}
-   
-   fclose($handle);
+
+    print "Fertig, in Datei $filename wurde $abfrage geschrieben";
+
+    fclose($handle);
 
 } else {
     print "Die Datei $filename ist nicht schreibbar";
+}
+   
 }
 
 echo $abfrage[0][1];
