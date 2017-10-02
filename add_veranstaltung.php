@@ -11,7 +11,7 @@
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
       
    
-	$statement = $pdo->prepare("INSERT INTO vereine (veranstaltung) VALUES (?)");
+	$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung) VALUES (?)");
       	$statement->execute(array($_POST["veranstaltung"]));
 	
 		
