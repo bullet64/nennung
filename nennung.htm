@@ -40,10 +40,10 @@ $result = "SELECT veranstaltung FROM id";
     <tr>
            <td>Veranstaltung</td>
            <td><input name="veranstaltung[]" size="30" type="text" required> *</td>
+            
+            <?php
             foreach($_POST['veranstaltung'] as $veranstaltung) {
 }
-            <?php
-            
             ?>
                
     </tr>
