@@ -37,6 +37,8 @@
     <tr>
            <td>Veranstaltung</td>
        <td><select name="veranstaltungen" style="width:200pt"> 
+         
+          
           <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
@@ -46,7 +48,7 @@ $sql = "SELECT veranstaltung FROM vereine";
 
 
 foreach ($pdo->query($sql) as $row) {
-                                     echo "<option value =".$row['veranstaltung']. ">">/option>";
+                                     echo "<option value =".$row['veranstaltung']." "</option>";
                                         }
 echo "</select></p>;
           
