@@ -43,7 +43,7 @@ $result = "SELECT veranstaltung FROM vereine";
               <?php
               $res = "SELECT veranstaltungen FROM vereine";
                while ($row =$res->fetch(PDO::FETCH_OBJ);
-               echo "<option value=\"Veranstaltungen\">" . $row['veranstaltungen'] . "</option>";
+               echo "<option value="$row"</option>";
                ?>
               </select></td>
                
