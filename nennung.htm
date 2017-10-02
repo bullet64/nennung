@@ -44,11 +44,11 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 //Abfrage
 $sql = "SELECT veranstaltung FROM vereine";
-// $result = $pdo->query($sql);
+
 
 
 foreach ($pdo->query($sql) as $row) {
-                                     echo "<option value =".$row['veranstaltung']."</option>";
+                                     echo "<option value =".$row['veranstaltung'].</option>";
                                         }
 //echo "</select></p>";
           
