@@ -40,6 +40,7 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Hobby' ";
 		  <th>EMail</th>
 		  <th>Car_ID</th>
 		  <th>Nenndatum</th>
+		  <th>Veranstaltung</th>
 		  		  	
 	  </tr>
 	  
@@ -77,7 +78,8 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Hobby' ";
 			$ergx = $erg_datum . " " . $uhrzeit;
 		
 	    ?>   
-	<td><?=$ergx?></td> 
+	<td><?=$ergx?></td>
+	<td><?=$row['veranstaltung']?></td> 
 	    
 	  </tr>
     <?php endforeach;
