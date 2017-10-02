@@ -33,11 +33,11 @@
    
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT veranstaltung FROM vereine');
+$stmt = $pdo->prepare('SELECT verein FROM vereine');
 $stmt->execute();
 ?>
    
-    <form id="idForm" method="post" action="nennung.php">
+    <form id="idForm" method="post" action="add_veranstaltung.php">
     
    <table>
    <caption>Adminformular</caption>
@@ -47,7 +47,7 @@ $stmt->execute();
    
     <tr>
            <td>Verein</td>
-           <td><input name="nachname" size="30" type="text" required> *</td>
+           <td><input name="verein" size="30" type="text" required> *</td>
     </tr>
       
       <tr>
