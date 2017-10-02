@@ -38,11 +38,22 @@
            <td>Veranstaltung</td>
        <td><input name="veranstaltung" size="30" type="text" list="veranstaltungen" required>
                <datalist id="ver">
-               
-                  
-                  
-                  
-                  
+               <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+
+//Abfrage
+//$sql = "SELECT veranstaltung FROM vereine";
+
+$stmt = $pdo->query('SELECT veranstaltung FROM vereine')->fetchAll(PDO::FETCH_COLUMN);
+foreach ($stmt as $row)
+{
+    //echo $row['veranstaltung'] . "\n";
+echo "<option value ="$row['veranstaltung']</option>";
+}
+
+
+?>
+
                   
                </datalist>
                *</td>          
