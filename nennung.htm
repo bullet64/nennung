@@ -43,7 +43,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 //Abfrage
 $sql = "SELECT veranstaltung FROM vereine";
  $result = $pdo->query($sql);
-while ($row = mysql_fetch_array($result)) {
+while ($row = $result->fetch(PDO::FETCH_ASSOC);)   {
                                                 echo "<option>".$row['veranstaltung']"</option>";
                                         }
           
