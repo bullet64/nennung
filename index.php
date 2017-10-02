@@ -46,7 +46,7 @@ $stmt->execute();
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN)) { ?>
+                  while($result = $stmt->fetch(PDO::FETCH_All)) { ?>
                  <option value="<?php echo $result ?>" />
                   <?php
                     } 
