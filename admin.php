@@ -40,7 +40,7 @@ $stmt->execute();
     <form id="idForm" method="post" action="add_verein.php">
     
    <table>
-   <caption>Adminformular</caption>
+   <caption>Neuen Verein eintragen</caption>
      
         
       
@@ -64,13 +64,13 @@ $stmt->execute();
    <form id="idForm2" method="post" action="add_veranstaltung.php">
     
    <table>
-   <caption>Adminformular</caption>
+   <caption>Neue Veranstaltung</caption>
      
         
       
    
     <tr>
-           <td>Verein</td>
+           <td>Veranstaltung</td>
            <td><input name="veranstaltung" size="30" type="text" required> *</td>
     </tr>
       
