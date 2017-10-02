@@ -44,7 +44,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 //Abfrage
 //$sql = "SELECT veranstaltung FROM vereine";
 
-$stmt = $pdo->query('SELECT veranstaltung FROM vereine')->fetchAll(PDO::FETCH_COLUMN);
+$stmt = $pdo->query('SELECT veranstaltung FROM vereine');
 foreach ($stmt as $row)
 {
     //echo $row['veranstaltung'] . "\n";
