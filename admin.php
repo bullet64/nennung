@@ -46,9 +46,15 @@ $stmt->execute();
       
    
     <tr>
-           <td>Nachname</td>
+           <td>Verein</td>
            <td><input name="nachname" size="30" type="text" required> *</td>
     </tr>
+      
+      <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+   </tr>
    
  </table>
 
