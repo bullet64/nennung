@@ -30,19 +30,20 @@
    
 
    
-   <form id="idForm2" method="post" action="nennung.php">
+   <form method="post" action="nennung.php">
     
    <table>
       <caption>Veranstaltung wählen</caption>
       <tr>
            <td>Veranstaltung</td>
-           <td><select name="veranstaltung" type="text" size="1" required>
+    
+         <td><select name="veranstaltung" size="1" required>
                
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query('SELECT veranstaltung FROM vereine');
       foreach ($stmt as $row) {
-         $value = $value * 2;
+ echo "<option value"Inhalt"</option><br/>"
             }
 ?>
 
