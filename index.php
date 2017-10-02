@@ -16,7 +16,7 @@
       <li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
        <li><a href="http://192.168.3.243/nennung/admin.php">Admin</a></li>
             <ul>
-               <li><a href="http://192.168.3.243/nennung/export_t.php">RCM Export</a></li>
+               <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
             </ul>   
               
   </ul>
