@@ -34,7 +34,7 @@ $stmt = $pdo->prepare('SELECT veranstaltung FROM vereine');
 $stmt->execute();
 ?>
    
-   <form method="post" action="nennung.php">
+    <form id="idForm" method="post" action="nennung.php">
     
    <table>
       <caption>Veranstaltung wählen</caption>
@@ -53,9 +53,8 @@ $stmt->execute();
                </datalist>
                *</td>
       </tr>
-      </table>
-   </form> 
-   
+     
+  
 
    
    
@@ -63,9 +62,9 @@ $stmt->execute();
 
    
 
-   <form id="idForm" method="post" action="nennung.php">
+  
       
-      <table>
+      
    <caption>Meldeformular</caption>
     <tr>
            <td>Nachname</td>
