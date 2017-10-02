@@ -42,6 +42,7 @@ $sql = "SELECT * FROM id";
 		  <th>EMail</th>
 		  <th>Car_ID</th>
 		  <th>Nenndatum</th>
+		  <th>Veranstaltung</th>
 		  		  	
 	  </tr>
 	  
@@ -67,6 +68,7 @@ $sql = "SELECT * FROM id";
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
+	<td><?=$row['veranstaltung']?></td>  
 	    
 	    
 	 <?php
