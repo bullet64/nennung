@@ -39,12 +39,13 @@ $result = "SELECT veranstaltung FROM vereine";
       <caption>Veranstaltung wählen</caption>
     <tr>
            <td>Veranstaltung</td>
-           <td><input name="veranstaltung[]" size="30" type="text" list="veranstaltungen" required> *</td>
-            
-            <?php
-            foreach($_POST['veranstaltung'] as $veranstaltung) {
-}
-            ?>
+           <select name="veranstaltungen">
+              <?php
+              $res = "SELECT veranstaltungen FROM vereine";
+               while ($row =$res->fetch(PDO::FETCH_OBJ);
+               echo "<option value=\"Veranstaltungen\">" . $row['veranstaltungen'] . "</option>";
+               ?>
+       </select>
                
     </tr>
    
