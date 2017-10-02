@@ -30,7 +30,7 @@
    
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = "SELECT veranstaltung FROM vereine";
+$stmt = $pdo->prepare('SELECT veranstaltung FROM vereine');
 ?>
    
    <form method="post" action="nennung.php">
