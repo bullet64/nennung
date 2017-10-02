@@ -39,13 +39,13 @@ $result = "SELECT veranstaltung FROM vereine";
       <caption>Veranstaltung wählen</caption>
     <tr>
            <td>Veranstaltung</td>
-           <select name="veranstaltungen">
+           <td><select name="veranstaltungen">
               <?php
               $res = "SELECT veranstaltungen FROM vereine";
                while ($row =$res->fetch(PDO::FETCH_OBJ);
                echo "<option value=\"Veranstaltungen\">" . $row['veranstaltungen'] . "</option>";
                ?>
-       </select>
+              </select></td>
                
     </tr>
    
