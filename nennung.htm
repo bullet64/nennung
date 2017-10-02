@@ -42,7 +42,7 @@ $stmt = $pdo->query('SELECT veranstaltung FROM vereine');
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   while($zeile = $stmt->fetch_array()) { 
-                 echo"<option value="<?php echo $stmt?>" />";
+                 echo"<option value='<?php echo $stmt?>' />";
                     } 
                   ?>
 
