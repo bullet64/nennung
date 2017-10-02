@@ -68,7 +68,7 @@ $sql = "SELECT * FROM id";
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
 	<td><?=$row['car_id']?></td>
-	<td><?=$row['veranstaltung']?></td>  
+	  
 	    
 	    
 	 <?php
@@ -83,6 +83,7 @@ $sql = "SELECT * FROM id";
 		
 	    ?>   
 	<td><?=$ergx?></td>
+	<td><?=$row['veranstaltung']?></td> 
 	    
 	  </tr>
     <?php endforeach;
