@@ -42,10 +42,8 @@ $result = "SELECT veranstaltung FROM id";
            <td><input name="veranstaltung" size="30" type="text" required> *</td>
             <?php
             echo "<select>"; 
-            while ($res = mysql_fetch_assoc($result)) { 
-                $a = $res[alias]; 
-                echo "<option>$a</option>"; 
-            } 
+            foreach ($pdo->query($result) as $veranstaltung) :
+            
             echo "</select>";
             ?>
                
