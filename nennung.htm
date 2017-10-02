@@ -28,10 +28,7 @@
 
    <! Abfrage der Veranstaltung -->   
    
-<?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$result = "SELECT veranstaltung FROM vereine";
-?>   
+
    
    <form id="idForm2" method="post" action="nennung.php">
     
@@ -40,12 +37,22 @@ $result = "SELECT veranstaltung FROM vereine";
     <tr>
            <td>Veranstaltung</td>
        <td><select name="veranstaltungen" style="width:200pt"> 
-          <?php 
-    while ($row = $result->fetchAll()) { 
-        echo '<option value="'. $row['veranstaltung'].'</option>'."\n"; 
-    } 
-?> 
+          <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+
+//Abfrage
+$sql = "SELECT veranstaltung FROM vereine";
+ $result = $pdo->query($sql);
+while ($row = mysql_fetch_array($result)) {
+                                                echo "<option>".$row['veranstaltung']"</option>";
+                                        }
           
+          
+          
+     
+    
+?> 
+          </select> 
           
               </td>
                
