@@ -59,5 +59,29 @@ $stmt->execute();
  </table>
 
  </form> 
+   
+   
+   <form id="idForm2" method="post" action="add_veranstaltung.php">
+    
+   <table>
+   <caption>Adminformular</caption>
+     
+        
+      
+   
+    <tr>
+           <td>Verein</td>
+           <td><input name="veranstaltung" size="30" type="text" required> *</td>
+    </tr>
+      
+      <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+   </tr>
+   
+ </table>
+
+ </form> 
 </body>
 </html>
