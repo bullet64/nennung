@@ -52,6 +52,21 @@ foreach ($stmt as $row)
 echo "<option value ="$row['veranstaltung']</option>";
 }
 
+
+$stmt = $pdo->query('SELECT nachname FROM id');
+while ($row = $stmt->fetch())
+{
+    echo $row['nachname'] . "\n";
+}
+
+
+
+
+
+
+
+
+
 ?>
 
          
