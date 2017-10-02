@@ -37,7 +37,7 @@ $stmt = $pdo->prepare('SELECT verein FROM vereine');
 $stmt->execute();
 ?>
    
-    <form id="idForm" method="post" action="add_veranstaltung.php">
+    <form id="idForm" method="post" action="add_verein.php">
     
    <table>
    <caption>Adminformular</caption>
