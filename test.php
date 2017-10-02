@@ -30,7 +30,8 @@
    
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query('SELECT veranstaltung FROM vereine');
+$stmt = $pdo->prepare('SELECT veranstaltung FROM vereine');
+$stmt->execute();
 ?>
    
    <form method="post" action="nennung.php">
@@ -42,8 +43,8 @@ $stmt = $pdo->query('SELECT veranstaltung FROM vereine');
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($zeile = $stmt->fetch_array()) { 
-                 echo"<option value='<?php echo $stmt?>' />";
+                  while($result = $stmt->fetchALL()) { 
+                 echo"<option value='<?php echo $result?>' />";
                     } 
                   ?>
 
