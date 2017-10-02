@@ -25,7 +25,13 @@
 
     <p style="text-align:center">Die Startgebühr wird am Wettkampftag entrichtet.
     Anmeldeschluss ist der 12. Mai 2018.</p>
+
+   <! Abfrage der Veranstaltung -->   
    
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$result = "SELECT veranstaltung FROM id";
+?>   
    
    <form id="idForm2" method="post" action="nennung.php">
     
@@ -34,16 +40,26 @@
     <tr>
            <td>Veranstaltung</td>
            <td><input name="veranstaltung" size="30" type="text" required> *</td>
+            <?php
+            echo "<select>"; 
+            while ($res = mysql_fetch_assoc($result)) { 
+                $a = $res[alias]; 
+                echo "<option>$a</option>"; 
+            } 
+            echo "</select>";
+            ?>
+               
     </tr>
    
    </table>
 
  </form> 
    
+   <?php $pd0 = NULL; ?>
    
    
    
-   
+ <! Abfrage der Meldedaten -->   
    
 
    <form id="idForm" method="post" action="nennung.php">
