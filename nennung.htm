@@ -39,12 +39,11 @@ $result = "SELECT veranstaltung FROM id";
       <caption>Veranstaltung wählen</caption>
     <tr>
            <td>Veranstaltung</td>
-           <td><input name="veranstaltung" size="30" type="text" required> *</td>
+           <td><input name="veranstaltung[]" size="30" type="text" required> *</td>
+            foreach($_POST['veranstaltung'] as $veranstaltung) {
+}
             <?php
-            echo "<select>"; 
-            foreach ($pdo->query($result) as $veranstaltung) :;
             
-            echo "</select>";
             ?>
                
     </tr>
