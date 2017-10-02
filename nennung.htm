@@ -36,20 +36,15 @@
       <caption>Veranstaltung wählen</caption>
       <tr>
            <td>Veranstaltung</td>
-    
-         <td><select name="veranstaltung" size="1" required>
-               
-<?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query('SELECT veranstaltung FROM vereine');
-      foreach ($stmt as $row) {
- echo "<option value"Inhalt"</option><br/>"
-            }
-?>
-
-
-              </select>  
-</td>
+    <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
+               <datalist id="veranstaltungen">
+               <option value="NRW-Cup NitroManiacs 2018" />
+               <option value="NRW-Cup Stoppelhopser Oberhausen 2018" />
+               <option value="NRW-Cup MFK Kürten 2018" />
+               <option value="NRW-Cup MSV Hürtgenwald 2018" />
+               </datalist>
+               *</td>
+         
                
 </tr>
    
