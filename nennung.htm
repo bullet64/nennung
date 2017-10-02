@@ -40,7 +40,11 @@ $result = "SELECT veranstaltung FROM vereine";
     <tr>
            <td>Veranstaltung</td>
        <td><select name="veranstaltungen" style="width:200pt"> 
-          
+          <?php 
+    while ($row = mysql_fetch_assoc($result)) { 
+        echo '<option value="'. $row['veranstaltungen'].'</option>'."\n"; 
+    } 
+?> 
           
           
               </td>
