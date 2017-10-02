@@ -43,8 +43,8 @@ $stmt->execute();
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($result = $stmt->fetch_array()) { 
-                 echo"<option value='<?php echo $result?>' />";
+                  while($result = $stmt->fetchALL()) { 
+                 echo"<option value='<?php echo $result['veranstaltung']?>' />";
                     } 
                   ?>
 
