@@ -8,11 +8,11 @@
    <?php
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
             	
-      echo "Verein: "           . htmlspecialchars($_POST["verein"]) . "<br>";
+      echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
       
    
-	$statement = $pdo->prepare("INSERT INTO vereine (verein) VALUES (?)");
-      	$statement->execute(array($_POST["verein"]));
+	$statement = $pdo->prepare("INSERT INTO vereine (veranstaltung) VALUES (?)");
+      	$statement->execute(array($_POST["veranstaltung"]));
 	
 		
 	$pdo = null;
