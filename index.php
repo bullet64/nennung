@@ -33,7 +33,7 @@
    
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT veranstaltung FROM vereine ORDER BY ASC');
+$stmt = $pdo->prepare('SELECT veranstaltung FROM vereine ORDER BY veranstaltung ASC');
 $stmt->execute();
 ?>
    
