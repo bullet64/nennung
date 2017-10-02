@@ -44,7 +44,7 @@ $stmt->execute();
                <datalist id="veranstaltungen">
                   <?php
                   while($result = $stmt->fetchALL()) { ?>
-                 echo"<option value='<?php echo $result ?>' />";
+                 <option value="<?php echo $result ?>" />
                   <?php
                     } 
                   ?>
