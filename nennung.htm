@@ -34,43 +34,35 @@
     
    <table>
       <caption>Veranstaltung wählen</caption>
-    <tr>
+      <tr>
            <td>Veranstaltung</td>
-       <td><select name="veranstaltung" type="text" required>
-               <datalist id="ver">
+           <td><select name="veranstaltung" type="text" required>
+               
                <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
-//Abfrage
-//$sql = "SELECT veranstaltung FROM vereine";
+
+
 
 $stmt = $pdo->query('SELECT veranstaltung FROM vereine');
 foreach ($stmt as $row)
 {
-    echo $row['veranstaltung'] . "\n";
+    echo $row['veranstaltung'] . "<p>";
 //echo "<option value ="$row['veranstaltung']</option>";
 }
 
 
 ?>
-
-                  
-               </datalist>
-               *</td>          
-         
-          
-          
-         
-          
-              </td>
+   
+</td>
                
-    </tr>
+</tr>
    
-   </table>
+</table>
 
- </form> 
+</form> 
    
-   <?php $pd0 = NULL; ?>
+<?php $pd0 = NULL; ?>
    
    
    
