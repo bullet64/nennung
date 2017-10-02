@@ -40,6 +40,7 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Top'";
 		  <th>EMail</th>
 		  <th>Car_ID</th>
 		  <th>Nenndatum</th>
+		  <th>Veranstaltung</th>
 		  		  	
 	  </tr>
 	  
@@ -78,6 +79,7 @@ $sql = "SELECT * FROM id WHERE klasse = 'OR8 Top'";
 		
 	    ?>   
 	<td><?=$ergx?></td>
+	<td><?=$row['veranstaltung']?></td>
 	    
 	  </tr>
     <?php endforeach;
