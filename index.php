@@ -37,7 +37,7 @@ $stmt->execute();
     <form id="idForm" method="post" action="nennung.php">
     
    <table>
-      <caption>Veranstaltung wählen</caption>
+     
       <tr>
            <td>Veranstaltung</td>
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
