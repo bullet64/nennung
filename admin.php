@@ -30,12 +30,7 @@
     Anmeldeschluss ist der 12. Mai 2018.</p>
 
 
-   
-<?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT verein FROM vereine');
-$stmt->execute();
-?>
+
    
     <form id="idForm" method="post" action="add_verein.php">
     
@@ -59,8 +54,7 @@ $stmt->execute();
  </table>
 
  </form> 
-   
-   
+
    <form id="idForm2" method="post" action="add_veranstaltung.php">
     
    <table>
