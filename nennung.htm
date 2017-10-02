@@ -41,7 +41,7 @@ $result = "SELECT veranstaltung FROM vereine";
            <td>Veranstaltung</td>
        <td><select name="veranstaltungen" style="width:200pt"> 
           <?php 
-    while ($row = mysql_fetch_assoc($result)) { 
+    while ($row = $result->fetch(PDO::FETCH_OBJ)) { 
         echo '<option value="'. $row['veranstaltungen'].'</option>'."\n"; 
     } 
 ?> 
