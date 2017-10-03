@@ -77,5 +77,32 @@
  </table>
 
  </form> 
+   
+   
+   </form> 
+
+   <form id="idForm3" method="post" action="del_veranstaltung.php">
+    
+   <table>
+   <caption>Lösche Veranstaltung</caption>
+     
+        
+      
+   
+    <tr>
+           <td>Veranstaltung</td>
+           <td><input name="veranstaltung" size="30" type="text" required> *</td>
+    </tr>
+      
+      <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+   </tr>
+   
+ </table>
+
+ </form> 
+   
 </body>
 </html>
