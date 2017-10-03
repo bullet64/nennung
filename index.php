@@ -92,7 +92,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     
       <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC, bundesland ASC");
+$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bundesland");
 //$stmt->execute();
 ?>
    
