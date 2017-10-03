@@ -58,7 +58,7 @@ if ( ! $db_erg )
                   
                   while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)) { 
                  
-                  echo "<option value=".$zeile[verein]";
+                  echo "<option value=". $zeile[verein] .";
                   
                     } 
                   ?>
