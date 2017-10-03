@@ -102,7 +102,7 @@ $stmt = $pdo->query("SELECT verein FROM vereine ORDER BY verein ASC");
      
       <tr>
            <td>Verein</td>
-    <td><input type="text" name="vereine" list="vereine" required>
+    <td><input type="text" name="verein" list="vereine" required>
                <datalist id="vereine">
                   <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
