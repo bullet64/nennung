@@ -47,7 +47,9 @@ $stmt->execute();
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                  dir = 'ASC'
+                  sort = 'verein'
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0 SORT BY $sort $dir)) { ?>
                  <option value="<?php echo $result ?>" />
                   <?php
                     } 
