@@ -58,7 +58,8 @@ if ( ! $db_erg )
                   //$dir = 'ASC'
                   //$sort = 'verein'
                   while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)) { ?>
-                 <option value="<?php echo $zeile ?>" />
+                 //<option value="<?php echo $zeile ?>" />
+                  echo "<option value="$zeile[verein]";
                   <?php
                     } 
                   ?>
