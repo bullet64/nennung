@@ -26,7 +26,7 @@
    <b>Nennsytem für RC-Car Rennen</b>
    </p>
 
-    <p style="text-align:center">Die Startgebühr ist VOR dem Wettkampftag zu entrichten.
+   <p style="text-align:center">Die Startgebühr ist <b>VOR</b> dem Wettkampftag zu entrichten.</br>
     Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
 
 
