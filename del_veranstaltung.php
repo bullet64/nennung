@@ -13,7 +13,7 @@
 	$stmt->bindParam(':filmID', $_POST['veranstaltung'], PDO::PARAM_INT);   
 	$stmt->execute();
 	$pdo = null;
-	echo "Die ausgewählte Veranstaltung $_POST['veranstaltung'] wurde gelöscht";
+	echo "Die ausgewählte Veranstaltung wurde gelöscht";
 	?>
 
 
