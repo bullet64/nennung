@@ -9,14 +9,12 @@
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
-	$erg = $_POST["veranstaltung"];
-	$db->query("DELETE FROM veranstaltungen WHERE id='2'");
-		echo $erg;
-      
-   $sql="SELECT id FROM veranstaltungen WHERE veranstaltung = $erg";
-   echo $sql;
-	//$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung) VALUES (?)");
-   //   	$statement->execute(array($_POST["veranstaltung"]));
+      $erg = $_POST["veranstaltung"];
+	
+   	$sql = "DELETE FROM veranstaltungen WHERE veranstaltung =  :filmID";
+	$stmt = $pdo->prepare($sql);
+	$stmt->bindParam(':filmID', $_POST['veranstaltung'], PDO::PARAM_INT);   
+	$stmt->execute();
 	
 		
 	$pdo = null;
