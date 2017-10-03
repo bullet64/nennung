@@ -34,11 +34,9 @@
 
   
 
-   <?php
-$order = "verein";
-$direction = "DESC";
+<?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare("SELECT verein FROM vereine SORT BY 2 $direction");
+$stmt = $pdo->prepare("SELECT verein FROM vereine");
 $stmt->execute();
 ?>
    
