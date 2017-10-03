@@ -9,6 +9,8 @@
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
+	$erg = $_POST["veranstaltung"];
+		echo $erg;
       
    //$sql="SELECT id FROM veranstaltungen WHERE veranstaltung= 'veranstaltung'];
    //echo $sql;
