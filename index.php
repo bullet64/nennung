@@ -53,7 +53,7 @@
                   //$dir = 'ASC'
                   //$sort = 'verein'
                   while($row = mysql_fetch_array($sql)) { ?>
-                 <option value="<?php echo $row ?>" />
+                 <option value="<?php echo .$row ?>" />
                   <?php
                     } 
                   ?>
