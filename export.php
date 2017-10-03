@@ -40,7 +40,7 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 //DB-Abfrage
-$sql = "SELECT * FROM nennungen";
+$sql = "SELECT * FROM nennungen OPTIONALLY ENCLOSED BY '"' ";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
