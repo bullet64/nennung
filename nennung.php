@@ -19,7 +19,7 @@
       echo "CarID: "              . htmlspecialchars($_POST["car_id"] . "<br>";
       echo "Klasse: "             . htmlspecialchars($_POST["klasse"] . "<br>";
       echo "E-Mail: "             . htmlspecialchars($_POST["email"] . "<br>";
-      echo "Meldedatum: " . htmlspecialchars($meldedatum) . "<br>";
+      echo "Meldedatum: " . $meldedatum . "<br>";
       echo "Veranstaltung: "      . htmlspecialchars($_POST["veranstaltung"] . "<br>";
    
 	$statement = $pdo->prepare("INSERT INTO id (nachname, vorname, geburtstag, dmc, verein, transponder_id, klasse, email, car_id, veranstaltung) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
