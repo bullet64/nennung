@@ -5,7 +5,7 @@
 //Definitionen
 $abfrage = array();
 $filename = 'export.csv';
-$header = array("Name","Vorname");
+$header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 
 
 
