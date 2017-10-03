@@ -96,7 +96,7 @@ $stmt = $pdo->query("SELECT verein FROM vereine ORDER BY verein ASC");
 //$stmt->execute();
 ?>
    
-    <form id="idForm2" method="post" action="nennung.php">
+    
     
    <table>
      
