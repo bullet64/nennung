@@ -10,7 +10,7 @@
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
       
-   $sql="SELECT id FROM veranstaltungen WHERE veranstaltung=$_POST["veranstaltung"];
+   $sql="SELECT id FROM veranstaltungen WHERE veranstaltung= 'veranstaltung'];
    echo $sql;
 	//$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung) VALUES (?)");
    //   	$statement->execute(array($_POST["veranstaltung"]));
