@@ -36,7 +36,7 @@
 
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare("SELECT verein FROM vereine");
+$stmt = $pdo->query("SELECT verein FROM vereine");
 $stmt->execute();
 ?>
    
