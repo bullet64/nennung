@@ -31,12 +31,11 @@
 
 
    
-<?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-//$stmt = $pdo->prepare('SELECT verein FROM vereine');
-//$stmt->execute();
-$sql = "SELECT verein FROM vereine";
 
+  <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->prepare('SELECT id FROM vereine');
+$stmt->execute();
 ?>
    
     <form id="idForm" method="post" action="nennung.php">
@@ -48,8 +47,8 @@ $sql = "SELECT verein FROM vereine";
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  foreach ($pdo->query($sql) as $row) ?>
-                 <option value="<?php echo $row['verein'] ?>" />
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option value="<?php echo $result ?>" />
                   <?php
                     } 
                   ?>
@@ -57,8 +56,7 @@ $sql = "SELECT verein FROM vereine";
                
                </datalist>
                *</td>
-      </tr>
-     
+      </tr>   
   
 
    
