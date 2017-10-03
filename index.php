@@ -48,8 +48,8 @@ $sql = "SELECT verein FROM vereine";
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($pdo->query($sql) as $row)) { ?>
-                 <option value="<?php echo $verein ?>" />
+                  foreach ($pdo->query($sql) as $row) ?>
+                 <option value="<?php echo $row['verein'] ?>" />
                   <?php
                     } 
                   ?>
