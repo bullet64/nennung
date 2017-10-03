@@ -106,7 +106,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bund
                <datalist id="vereine">
                   <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option value="<?php echo '$result' ?>" />
+                 <option value="<?php echo htmlspecialchars($result) ?>" />
                   <?php
                     } 
                  $pdo = null; ?>
