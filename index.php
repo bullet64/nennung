@@ -98,7 +98,7 @@ $stmt = $pdo->query("SELECT verein FROM vereine ORDER BY verein ASC");
    
     
     
-   <table>
+   
      
       <tr>
            <td>Verein</td>
