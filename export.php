@@ -40,7 +40,7 @@ $header = array("Name","Vorname");
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 //DB-Abfrage
-$sql = "SELECT * FROM id";
+$sql = "SELECT * FROM nennungen";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
