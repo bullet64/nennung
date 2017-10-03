@@ -35,10 +35,12 @@
   
 
    <?php
+   $order = "verein";
+   $direction = "ASC";
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT verein FROM vereine SORT BY ?, ?');
-$stmt->bindParam(verein, $offset,PDO::PARAM_INT);
-$stmt->bindParam(ASC, $offset,PDO::PARAM_INT);
+$stmt = $pdo->prepare('SELECT verein FROM vereine SORT BY ".$order ." ".$direction');
+$stmt->bindParam($order, $offset,PDO::PARAM_INT);
+$stmt->bindParam($direction, $offset,PDO::PARAM_INT);
 $stmt->execute();
 ?>
    
