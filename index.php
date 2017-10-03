@@ -23,11 +23,11 @@
 
 <body>
    <p style="text-align:center">
-   <b>Anmeldung zum 10. NRW-Cup am 14. Mai 2018 in Mönchengladbach :)</b>
+   <b>Nennsytem für RC-Car Rennen</b>
    </p>
 
-    <p style="text-align:center">Die Startgebühr wird am Wettkampftag entrichtet.
-    Anmeldeschluss ist der 12. Mai 2018.</p>
+    <p style="text-align:center">Die Startgebühr ist VOR dem Wettkampftag zu entrichten.
+    Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
 
 
    
