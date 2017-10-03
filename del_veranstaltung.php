@@ -13,7 +13,7 @@
 		echo $erg;
       
    $sql="SELECT id FROM veranstaltungen WHERE veranstaltung = $erg";
-   //echo $sql;
+   echo $sql;
 	//$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung) VALUES (?)");
    //   	$statement->execute(array($_POST["veranstaltung"]));
 	
