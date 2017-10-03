@@ -22,7 +22,7 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
     }
 
     // Schreibe $header in die geöffnete Datei. Trenne die Daten mit einem ";"
-    if (!fputcsv($handle, $header, ';')) {
+    if (!fputcsv($handle, $header,$delimiter = ',', $enclosure = '"')) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
