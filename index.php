@@ -37,7 +37,7 @@
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query("SELECT verein FROM vereine ORDER BY verein ASC");
-$stmt->execute();
+//$stmt->execute();
 ?>
    
     <form id="idForm" method="post" action="nennung.php">
