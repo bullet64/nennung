@@ -11,8 +11,8 @@ error_reporting(E_ALL);
 define ( 'MYSQL_HOST',      'localhost' );
  
 // bei XAMPP ist der MYSQL_Benutzer: root
-define ( 'MYSQL_BENUTZER',  '' );
-define ( 'MYSQL_KENNWORT',  '' );
+define ( 'MYSQL_BENUTZER',  'bullet64' );
+define ( 'MYSQL_KENNWORT',  'xt19Zkl' );
 // für unser Bsp. nennen wir die DB adressverwaltung
-define ( 'MYSQL_DATENBANK', 'adressverwaltung' );
+define ( 'MYSQL_DATENBANK', 'nennung' );
 ?>
