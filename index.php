@@ -35,7 +35,9 @@
   
 <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT verein FROM vereine SORT BY verein ASC');
+   $sort = 'verein'
+      $dir = 'ASC'
+$stmt = $pdo->prepare('SELECT verein FROM vereine SORT BY $sort $dir');
 $stmt->execute();
 ?>
    
