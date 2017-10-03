@@ -38,7 +38,12 @@
 //$stmt->execute();
    $con = mysqli_connect("localhost","bullet64","xt19Zkl","nennung");
    $sql = "SELECT verein FROM vereine"; //Tabelle selektieren
-   
+   $db_erg = mysqli_query( $con, $sql );
+if ( ! $db_erg )
+{
+  die('Ungültige Abfrage: ' . mysqli_error());
+}
+ 
 ?>
    
     <form id="idForm" method="post" action="nennung.php">
@@ -52,8 +57,8 @@
                   <?php
                   //$dir = 'ASC'
                   //$sort = 'verein'
-                  while($row = mysql_fetch_array($sql)) { ?>
-                 <option value="<?php echo .$row ?>" />
+                  while($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)) { ?>
+                 <option value="<?php echo .$zeile['verein'] ?>" />
                   <?php
                     } 
                   ?>
