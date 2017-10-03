@@ -10,6 +10,7 @@
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
 	$erg = $_POST["veranstaltung"];
+	$db->query("DELETE FROM veranstaltungen WHERE veranstaltung = $erg");
 		echo $erg;
       
    $sql="SELECT id FROM veranstaltungen WHERE veranstaltung = $erg";
