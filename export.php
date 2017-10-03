@@ -40,14 +40,14 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 //DB-Abfrage
-$sql = "SELECT * FROM nennungen OPTIONALLY ENCLOSED BY '"' ";
+$sql = "SELECT * FROM nennungen";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = htmlspecialchars($row['veranstaltung']).";".$row['vorname'].";".$row['nachname']; 
+    $abfrage[] = .""".htmlspecialchars($row['veranstaltung']).""". .";".$row['vorname'].";".$row['nachname']; 
 
 // Daten schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
