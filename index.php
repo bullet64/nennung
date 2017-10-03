@@ -34,7 +34,8 @@
 
   <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT id FROM vereine');
+//$stmt = $pdo->prepare('SELECT id FROM vereine');
+$stmt = $pdo->query('SELECT verein FROM vereine')->fetchAll(PDO::FETCH_COLUMN, 0);
 $stmt->execute();
 ?>
    
@@ -47,7 +48,7 @@ $stmt->execute();
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                  while($stmt)) { ?>
                  <option value="<?php echo $result ?>" />
                   <?php
                     } 
