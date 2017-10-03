@@ -89,17 +89,49 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
            <td><input pattern="^[0-9]{4}$" name="dmc" size="6" type="number" min="1" max="9999"></td>
     </tr>
 
-    <tr>
+    
+      <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT verein FROM vereine ORDER BY verein ASC");
+//$stmt->execute();
+?>
+   
+    <form id="idForm2" method="post" action="nennung.php">
+    
+   <table>
+     
+      <tr>
            <td>Verein</td>
-           <td><input type="text" name="verein" list="vereine" required>
+    <td><input type="text" name="vereine" list="vereine" required>
                <datalist id="vereine">
-               <option value="NitroManiacs" />
-               <option value="Stoppelhopser Oberhausen" />
-               <option value="MFK Kürten" />
-               <option value="ohne Verein" />
+                  <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option value="<?php echo $result ?>" />
+                  <?php
+                    } 
+                 $pdo = null; ?>
+
+               
                </datalist>
                *</td>
-   </tr>
+      </tr>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
    <tr>
      <td>Transponder ID</td>
