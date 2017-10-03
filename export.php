@@ -47,7 +47,7 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = array("htmlspecialchars($row['veranstaltung'])", "$row['vorname']", "$row['nachname']"); 
+    $abfrage[] = "htmlspecialchars($row['veranstaltung'])", "$row['vorname']", "$row['nachname']"; 
 
 // Daten schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
