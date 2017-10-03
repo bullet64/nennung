@@ -32,18 +32,11 @@
 
    
 
-  <?php
-//$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-//$stmt = $pdo->prepare('SELECT verein FROM vereine');
-//$stmt->execute();
-   $con = mysqli_connect("localhost","bullet64","xt19Zkl","nennung");
-   $sql = "SELECT verein FROM vereine"; //Tabelle selektieren
-   $db_erg = mysqli_query( $con, $sql );
-if ( ! $db_erg )
-{
-  die('Ungültige Abfrage: ' . mysqli_error());
-}
- 
+  
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->prepare('SELECT id FROM vereine');
+$stmt->execute();
 ?>
    
     <form id="idForm" method="post" action="nennung.php">
@@ -55,19 +48,16 @@ if ( ! $db_erg )
     <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
                <datalist id="veranstaltungen">
                   <?php
-                  
-                  while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC)) { 
-                 
-                  echo "<option value= . $zeile[verein] . />";
-                  
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option value="<?php echo $result ?>" />
+                  <?php
                     } 
                   ?>
 
                
                </datalist>
                *</td>
-      </tr>   
-  
+      </tr>  
 
    
    
