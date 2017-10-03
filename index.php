@@ -33,9 +33,12 @@
    
 
   <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->prepare('SELECT verein FROM vereine');
-$stmt->execute();
+//$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+//$stmt = $pdo->prepare('SELECT verein FROM vereine');
+//$stmt->execute();
+   $con = mysqli_connect("localhost","bullet64","xt19Zkl","nennung");
+   $sql = "SELECT verein FROM vereine"; //Tabelle selektieren
+   
 ?>
    
     <form id="idForm" method="post" action="nennung.php">
@@ -49,8 +52,8 @@ $stmt->execute();
                   <?php
                   //$dir = 'ASC'
                   //$sort = 'verein'
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0 SORT BY $sort $dir)) { ?>
-                 <option value="<?php echo $result ?>" />
+                  while($row = mysql_fetch_array($sql)) { ?>
+                 <option value="<?php echo $.row['verein'] ?>" />
                   <?php
                     } 
                   ?>
