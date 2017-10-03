@@ -37,7 +37,7 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
 
 
 //DB-Aufruf
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$pdo = new PDO('mysql:charset=utf8mb4', 'mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 
 //DB-Abfrage
 $sql = "SELECT * FROM nennungen";
