@@ -94,7 +94,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
 //$stmt->execute();
 ?>
    
-    <form id="idForm" method="post" action="nennung.php">
+    <form id="idForm" method="post" action="del_veranstaltung.php">
     
    <table>
      
