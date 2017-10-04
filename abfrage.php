@@ -77,6 +77,7 @@ $sql = "SELECT * FROM nennungen";
 			$m_date = $row['meldedatum']; // Meldedatum
 			print $m_date;
 			$date = substr($m_date, -19, 10);
+			print $date;
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
 			$uhrzeit = substr($m_date, 11, -7);
