@@ -53,7 +53,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        <form action="#">
           <label>Veranstaltung
         <td><select name="veranstaltung">
-           <option> </option>
+           <option></option>
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
@@ -114,12 +114,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bundesland");
 //$stmt->execute();
 ?>
-   
-    
-    
-   
-     
-      <tr>
+
+   <tr>
            <td>Verein</td>
     <td><input type="text" name="verein" list="vereine" required>
                <datalist id="vereine">
@@ -136,7 +132,30 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bund
       </tr>
       
       
+  <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY bundesland ASC");
+//$stmt->execute();
+?>
       
+      <tr>
+       <td>   
+       <form action="#">
+          <label>Verein
+        <td><select name="verein">
+           <option></option>
+            <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option><?php echo htmlspecialchars($result) ?></option>
+                  <?php
+                    } 
+                 $pdo = null; ?>
+                
+             </select>
+      </label>
+    </form>
+       </td>
+    </tr>     
       
 
    <tr>
