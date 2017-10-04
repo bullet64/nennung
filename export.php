@@ -73,6 +73,15 @@ if (is_writable($filename)) {
 
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
+
+fputcsv($handle, ['Spalte 1','Spalte 2']);
+$data = ['sample','data'];
+
+//fputs($handle, implode($data,',')."\n");
+
+// or
+
+fwrite($handle, implode($data,',')."\n");
     fclose($handle);
 
 } else {
