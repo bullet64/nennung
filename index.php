@@ -60,14 +60,20 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
                *</td>
       </tr>
    
-   <tr>
+   <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
+      
+      <tr>
        <td>   
        <form action="#">
           <label>Veranstaltungen:
         <td><select name="veranstaltung">
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option value="<?php echo htmlspecialchars($result) ?>" />
+                 <option="<?php echo htmlspecialchars($result) ?>" />
                   <?php
                     } 
                  $pdo = null; ?>
