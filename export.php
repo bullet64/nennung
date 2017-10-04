@@ -47,7 +47,8 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname']; 
+    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+    $csv_output = "\r\n" . implode(",", $abfrage);
 
 // Daten schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
@@ -62,7 +63,6 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    $csv_output .= "\r\n" . implode(",", $abfrage);
     if (!fputcsv($handle, $csv_output)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
