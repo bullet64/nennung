@@ -3,7 +3,7 @@
 
 
 //Definitionen
-$abfrage = array();
+//$abfrage = array();
 $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 
@@ -47,7 +47,7 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+    $abfrage = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
     $abfrage2 = implode[$abfrage, ',')."\n");
     
 
