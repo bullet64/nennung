@@ -65,24 +65,15 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    fputs(STDOUT, implode$abfrage, ','),"\n");
-    //if (!fputcsv($handle, $abfrage2)) {
-    //    print "Kann in die Datei $filename nicht schreiben";
-    //    exit;
-    //}
+    if (!fputcsv($handle, $abfrage)) {
+        print "Kann in die Datei $filename nicht schreiben";
+        exit;
+    }
 
-    //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
+    print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
-fputcsv($handle, ['Spalte 1','Spalte 2']);
-$data = ['sample','data'];
-
-//fputs($handle, implode($data,',')."\n");
-
-// or
-
-fwrite($handle, implode($data,',')."\n");
-    fclose($handle);
+    
 
 } else {
     print "Die Datei $filename ist nicht schreibbar";
