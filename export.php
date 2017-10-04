@@ -29,7 +29,7 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
 
     // print "Fertig, in Datei $filename wurde $header geschrieben"; // Kann später weg!
 
-    //fclose($handle);
+    fclose($handle);
 
 } else {
     print "Die Datei $filename ist nicht schreibbar";
@@ -69,13 +69,9 @@ if (is_writable($filename)) {
     //       print "Kann in die Datei $filename nicht schreiben";
     //       exit;
     //}
-    while (!feof($handle)) {
- 
-        $line = fgets($handle);
-        echo $line;
- 
-     }
-
+    $fp = fopen($filename, 'w'); 
+foreach($abfrage as $values) fputs($fp, $values."n"); 
+fclose($fp); 
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
