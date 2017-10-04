@@ -10,7 +10,7 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
     // Wir öffnen $filename im "Schreiben" - Modus. Datei wird komplett überschrieben!
     // Der Dateizeiger befindet sich am Anfang der Datei, und
     // dort wird $header später mit fputcsv() geschrieben.
-     if (!$handle = fopen($filename, "w")) {
+     if (!$handle = fopen($filename, "a")) {
          print "Kann die Datei $filename nicht öffnen";
          exit;
     }
@@ -24,6 +24,8 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
 } else {
     print "Die Datei $filename ist nicht schreibbar";
 }
+
+
 //DB-Aufruf
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 //DB-Abfrage
@@ -33,7 +35,7 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+    $abfrage[] = '"' $row['veranstaltung'] '"' . "," . '"' . $row['vorname'] . '"' . "," . '"' . $row['nachname'] . '"';
     
    
     
@@ -43,11 +45,11 @@ if (is_writable($filename)) {
     // Wir öffnen $filename im "Anhänge" - Modus.
     // Der Dateizeiger befindet sich am Ende der Datei, und
     // dort wird $somecontent später mit fwrite() geschrieben.
-    if (!$handle = fopen($filename, "a")) {
-         print "Kann die Datei $filename nicht öffnen";
-         exit;
-    }
-    
+    //if (!$handle = fopen($filename, "a")) {
+    //     print "Kann die Datei $filename nicht öffnen";
+    //     exit;
+    //}
+    TTTTTTTTTTTT
     // Schreibe $somecontent in die geöffnete Datei.
     if (!fputcsv($handle, $abfrage)) {
            print "Kann in die Datei $filename nicht schreiben";
