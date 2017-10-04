@@ -64,11 +64,11 @@ if (is_writable($filename)) {
     }
     
     // Schreibe $somecontent in die geöffnete Datei.
-    if (!fputcsv($handle, $abfrage)) {
-        print "Kann in die Datei $filename nicht schreiben";
-        exit;
-    }
-    
+    //if (!fputcsv($handle, $abfrage)) {
+     //   print "Kann in die Datei $filename nicht schreiben";
+      //  exit;
+    //}
+    echo fputs($handle,$abfrage);
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
