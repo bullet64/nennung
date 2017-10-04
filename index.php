@@ -86,7 +86,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       
     <tr>
            <td>Land</td>
-           <td><input type="text" size ="10" name="country" list="countries" required>
+           <td><input type="text" size ="6" name="country" list="countries" required>
          <datalist id="countries">
          <option value="DE" />
          <option value="NL" />
