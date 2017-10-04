@@ -50,7 +50,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
                <datalist id="veranstaltungen">
                   <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option value="<?php echo htmlspecialchars($result) ?>" />
+                  <option><?php echo htmlspecialchars($result) ?></option>
                   <?php
                     } 
                  $pdo = null; ?>
