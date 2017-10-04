@@ -157,14 +157,19 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bund
     </tr>
       
     <tr>
-       <td>Klasse</td>
-       <td><input type="text" name="klasse" list="klassen" required>
-         <datalist id="klassen">
-         <option value="OR8 Hobby" />
-         <option value="OR8 Top" />
-         </datalist>
-      *</td>
-   </tr>
+       <td>   
+       <form action="#">
+          <label>Klasse:
+        <td><select name="klasse">
+          <option>OR8 Hobby</option>
+          <option>OR8 Top</option>
+          </select>
+      </label>
+    </form>
+       </td>
+    </tr> 
+
+
 
    <tr>
        <td>EMail</td>
