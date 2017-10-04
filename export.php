@@ -70,7 +70,7 @@ if (is_writable($filename)) {
     //       exit;
     //}
     $fp = fopen($filename, 'a'); 
-foreach($abfrage as $values) fputs($fp, $values."n"); 
+foreach($abfrage as $values) fputs($fp, $values."\n"); 
 fclose($fp); 
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
