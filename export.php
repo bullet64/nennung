@@ -62,7 +62,8 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    if (!fputcsv($handle, $abfrage)) {
+    $csv_output .= "\r\n" . implode(",", $abfrage);
+    if (!fputcsv($handle, $csv_output)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
