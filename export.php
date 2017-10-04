@@ -3,9 +3,9 @@
 
 
 //Definitionen
-//$abfrage = array();
+$abfrage = array();
 $filename = 'export.csv';
-$header = "Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence";
+$header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 
 
 
@@ -47,8 +47,8 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage = "$row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname']";
-    print abfrage;
+    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+    
    
     
 
@@ -65,11 +65,11 @@ if (is_writable($filename)) {
     }
     
     // Schreibe $somecontent in die geöffnete Datei.
-    //if (!fputcsv($handle, $abfrage)) {
-     //   print "Kann in die Datei $filename nicht schreiben";
-      //  exit;
-    //}
-    echo fputs($filename,$abfrage);
+    if (!fputcsv($handle, $abfrage)) {
+           print "Kann in die Datei $filename nicht schreiben";
+           exit;
+    }
+    
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
