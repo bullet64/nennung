@@ -85,14 +85,17 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     </tr>
       
     <tr>
-           <td>Land</td>
-           <td><input type="text" size ="6" name="country" list="countries" required>
-         <datalist id="countries">
-         <option value="DE" />
-         <option value="NL" />
-         <option value="BE" />
-         </datalist>
-      *</td>
+          <form action="#">
+      <label>Künstler(in):
+        <select name="top5">
+          <option>Heino</option>
+          <option>Michael Jackson</option>
+          <option>Tom Waits</option>
+          <option>Nina Hagen</option>
+          <option>Marianne Rosenberg</option>
+        </select>
+      </label>
+    </form>
     </tr> 
 
     <tr>
