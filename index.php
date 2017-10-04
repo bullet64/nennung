@@ -71,7 +71,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        <form action="#">
           <label>Veranstaltung
         <td><select name="veranstaltung">
-           <option> </option>
+           <option></option>
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
