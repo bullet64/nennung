@@ -119,31 +119,29 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bund
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
 
    <tr>
-     <td>Transponder ID</td>
-     <td><input pattern="^[0-9]{7}$" name="transponder_id" size="8" type="number" min="1" max="9999999" required> *</td>
+     <td>Transponder ID Nr.1</td>
+     <td><input pattern="^[0-9]{7}$" name="transponder_id1" size="8" type="number" min="1" max="9999999" required> *</td>
      </tr>
        
        
     <tr>
-       <td>Car ID</td>
-       <td><input pattern="^[0-9]{1}$" name="car_id" size="6" type="number" min="0" max="9" value="0"> </td>
+       <td>Car ID Nr.1</td>
+       <td><input pattern="^[0-9]{1}$" name="car_id1" size="6" type="number" min="0" max="9" value="0"> </td>
     </tr>
+    
+     <tr>
+     <td>Transponder ID Nr.2</td>
+     <td><input pattern="^[0-9]{7}$" name="transponder_id2" size="8" type="number" min="1" max="9999999" required> *</td>
+     </tr>
        
+       
+    <tr>
+       <td>Car ID Nr.2</td>
+       <td><input pattern="^[0-9]{1}$" name="car_id2" size="6" type="number" min="0" max="9" value="0"> </td>
+    </tr>
+      
     <tr>
        <td>Klasse</td>
        <td><input type="text" name="klasse" list="klassen" required>
