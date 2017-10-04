@@ -32,7 +32,33 @@
 
    
 
+  
 
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
+   
+    <form id="idForm" method="post" accept-charset="UTF-8" action="nennung.php">
+    
+   <table>
+     
+      <tr>
+           <td>Veranstaltung</td>
+    <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
+               <datalist id="veranstaltungen">
+                  <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                  <option value="<?php echo htmlspecialchars($result) ?>" />
+                  <?php
+                    } 
+                 $pdo = null; ?>
+
+               
+               </datalist>
+               *</td>
+      </tr>
    
    <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
@@ -45,7 +71,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        <form action="#">
           <label>Veranstaltung
         <td><select name="veranstaltung">
-           <option></option>
+           <option> </option>
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
@@ -127,7 +153,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bund
                *</td>
       </tr>
       
-     
+      
       
       
 
