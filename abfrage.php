@@ -64,10 +64,10 @@ $sql = "SELECT * FROM nennungen";
 	    
 	<td><?=$row['dmc']?></td>
 	<td><?=$row['verein']?></td>
-	<td><?=$row['transponder_id']?></td>
+	<td><?=$row['transponder_id1']?></td>
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
-	<td><?=$row['car_id']?></td>
+	<td><?=$row['car_id1']?></td>
 	  
 	    
 	    
@@ -75,6 +75,7 @@ $sql = "SELECT * FROM nennungen";
 	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
 	
 			$m_date = $row['meldedatum']; // Meldedatum
+			print $m_date;
 			$date = substr($m_date, 0, -16);
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
