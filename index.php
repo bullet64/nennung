@@ -60,7 +60,23 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
                *</td>
       </tr>
    
-   
+   <tr>
+       <td>   
+       <form action="#">
+          <label>Veranstaltungen:
+        <td><select name="veranstaltung">
+            <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option="<?php echo htmlspecialchars($result) ?>" />
+                  <?php
+                    } 
+                 $pdo = null; ?>
+                
+             </select>
+      </label>
+    </form>
+       </td>
+    </tr> 
 
    
 
