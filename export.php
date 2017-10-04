@@ -68,7 +68,7 @@ if (is_writable($filename)) {
      //   print "Kann in die Datei $filename nicht schreiben";
       //  exit;
     //}
-    echo fputs($handle,$abfrage);
+    echo fputs($filename,$abfrage);
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
