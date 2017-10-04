@@ -35,7 +35,7 @@ foreach ($pdo->query($sql) as $row) {
    //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = $row['veranstaltung'],$row['vorname'],$row['nachname'];
+    $abfrage[] = $row['veranstaltung'].",".$row['vorname'].",".$row['nachname'];
     
    
     
