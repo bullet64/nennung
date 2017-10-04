@@ -109,32 +109,12 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     </tr>
 
     
-      <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein, bundesland");
-//$stmt->execute();
-?>
-
-   <tr>
-           <td>Verein</td>
-    <td><input type="text" name="verein" list="vereine" required>
-               <datalist id="vereine">
-                  <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option value="<?php echo htmlspecialchars($result) ?>" />
-                  <?php
-                    } 
-                 $pdo = null; ?>
-
-               
-               </datalist>
-               *</td>
-      </tr>
+      
       
       
   <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY bundesland ASC");
+$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC");
 //$stmt->execute();
 ?>
       
