@@ -69,7 +69,7 @@ if (is_writable($filename)) {
     //       print "Kann in die Datei $filename nicht schreiben";
     //       exit;
     //}
-    $fp = fopen($filename, 'w'); 
+    $fp = fopen($filename, 'a'); 
 foreach($abfrage as $values) fputs($fp, $values."n"); 
 fclose($fp); 
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
