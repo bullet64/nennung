@@ -7,8 +7,6 @@ $abfrage = array();
 $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 
-
-
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
     if (is_writable($filename)) {
@@ -21,13 +19,11 @@ $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","C
          exit;
     }
 
-    // Schreibe $header in die geöffnete Datei. Trenne die Daten mit einem ";"
+    // Schreibe $header in die geöffnete Datei. Trenne die Daten mit einem ","
     if (!fputcsv($handle, $header,$delimiter = ',', $enclosure = '"')) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
-
-    // print "Fertig, in Datei $filename wurde $header geschrieben"; // Kann später weg!
 
     fclose($handle);
 
@@ -44,47 +40,32 @@ $sql = "SELECT * FROM nennungen";
 
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
-   //echo $row['vorname'].";".$row['nachname']."<br />"; // Kann später weg!
-   
-// Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
-    $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+     // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.
+     $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
     
-   
-    
+     // Daten schreiben
+    // Sichergehen, dass die Datei existiert und beschreibbar ist.
+    if (is_writable($filename)) {
 
-// Daten schreiben
-// Sichergehen, dass die Datei existiert und beschreibbar ist.
-if (is_writable($filename)) {
-
-    // Wir öffnen $filename im "Anhänge" - Modus.
-    // Der Dateizeiger befindet sich am Ende der Datei, und
-    // dort wird $somecontent später mit fwrite() geschrieben.
-    if (!$handle = fopen($filename, "a")) {
-         print "Kann die Datei $filename nicht öffnen";
-         exit;
+        // Wir öffnen $filename im "Anhänge" - Modus.
+        // Der Dateizeiger befindet sich am Ende der Datei, und
+        // dort wird $abfrage später mit fputs() geschrieben.
+        if (!$handle = fopen($filename, "a")) {
+            print "Kann die Datei $filename nicht öffnen";
+            exit;
     }
     
-    // Schreibe $somecontent in die geöffnete Datei.
-    //if (!fputcsv($handle, $abfrage)) {
-    //       print "Kann in die Datei $filename nicht schreiben";
-    //       exit;
-    //}
-    $fp = fopen($filename, 'a'); 
-foreach($abfrage as $values) fputs($fp, $values."\n"); 
-fclose($fp); 
-    //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
+        // Schreibe $abfrage in die geöffnete Datei.
+        $fp = fopen($filename, 'a'); 
+        foreach($abfrage as $values) fputs($fp, $values."\n"); 
+        fclose($fp); 
 
-
-    
-
-} else {
-    print "Die Datei $filename ist nicht schreibbar";
-}
-// Das Array wieder leeren!
+    } else {
+        print "Die Datei $filename ist nicht schreibbar";
+    }
+    // Das Array wieder leeren!
     $abfrage = array();
-}
-
-
+    }
 
 header ("Content-Type: application/download");
 header ("Content-Disposition: attachment; filename=$filename");
@@ -92,8 +73,6 @@ header("Content-Length: " . filesize("$filename"));
 $fp = fopen("$filename", "r");
 fpassthru($fp);
 fclose($fp);
-
-//print "Fertig, in die Datei $filename wurden die Daten geschrieben!";
 
 //DB close
 $pdo = null;
