@@ -83,6 +83,17 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
            <td>Geburtstag</td>
            <td><input name="geburtstag" type="date" required> *</td>
     </tr>
+      
+    <tr>
+           <td>Land</td>
+           <td><input type="text" name="country" list="countries" required>
+         <datalist id="countries">
+         <option value="DE" />
+         <option value="NL" />
+         <option value="BE" />
+         </datalist>
+      *</td>
+    </tr> 
 
     <tr>
            <td>DMC-Nr</td>
