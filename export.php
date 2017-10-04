@@ -65,13 +65,11 @@ if (is_writable($filename)) {
     }
     
     // Schreibe $somecontent in die geöffnete Datei.
-    //if (!fputcsv($handle, $abfrage2)) {
-    //    print "Kann in die Datei $filename nicht schreiben";
-    //    exit;
-    /}
-    while($row = mysqli_fetch_array($abfrage, MYSQLI_NUM)){
-           fwrite($fp, implode(',', $row) . "\r\n");
-        }
+    if (!fputcsv($handle, $abfrage2)) {
+        print "Kann in die Datei $filename nicht schreiben";
+        exit;
+    }
+    
     //print "Fertig, in Datei $filename wurde $abfrage geschrieben";
 
 
