@@ -49,7 +49,7 @@ foreach ($pdo->query($sql) as $row) {
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
     $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
-   $abfrage2 = str_replace(""", " ", $abfrage)
+   $abfrage2 = str_replace(""", " ", $abfrage);
     
 
 // Daten schreiben
