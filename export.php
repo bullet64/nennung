@@ -4,7 +4,7 @@
 
 //Definitionen
 $abfrage = array();
-
+$abfrage2 = array();
 $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 
@@ -49,7 +49,7 @@ foreach ($pdo->query($sql) as $row) {
    
 // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.    
     $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
-   
+   $abfrage2 = str_replace(""", " ", $abfrage)
     
 
 // Daten schreiben
@@ -65,7 +65,7 @@ if (is_writable($filename)) {
     }
 
     // Schreibe $somecontent in die geöffnete Datei.
-    if (!fputcsv($handle, $abfrage)) {
+    if (!fputcsv($handle, $abfrage2)) {
         print "Kann in die Datei $filename nicht schreiben";
         exit;
     }
