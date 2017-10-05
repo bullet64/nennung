@@ -51,18 +51,13 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       <tr>
        <td>   
        <form action="nennung.php">
-          <label>Veranstaltung
-        <td><select name="veranstaltung">
-           <option></option>
-            <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option><?php echo htmlspecialchars($result) ?></option>
-                  <?php
-                    } 
-                 $pdo = null; ?>
-                
-             </select>
-      </label>
+          <label>Land
+        <td><select name="land">
+          <option>DE</option>
+          <option>NL</option>
+           <option>BE</option></td>
+        </select>
+          </label>
     </form>
        </td>
     </tr> 
