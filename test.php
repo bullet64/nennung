@@ -23,20 +23,7 @@
 
 <body>
    <p style="text-align:center">
-   <b>Nennsytem für RC-Car Rennen</b>
-   </p>
-
-   <p style="text-align:center">Die Startgebühr ist <b>VOR</b> dem Wettkampftag zu entrichten.</br>
-    Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
-
-
-   
-
-  
-
-
-   
-    <form id="idForm" method="post" accept-charset="UTF-8" action="nennung.php">
+  <form id="idForm" method="post" accept-charset="UTF-8" action="nennung.php">
     
    <table>
      
@@ -59,7 +46,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
            <option>BE</option></td>
         </select>
           </label>
-    </form>
+   
        </td>
     </tr> 
       
@@ -68,5 +55,5 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       <td colspan="3"><input type="submit" value="Absenden">
       <input type="reset" value="Löschen">
    </tr>
-     
+      </form>
      </body>
