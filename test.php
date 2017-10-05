@@ -29,11 +29,7 @@
      
       
    
-   <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
-//$stmt->execute();
-?>
+   
       
       <tr>
        <td>   
@@ -50,11 +46,11 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        </td>
     </tr> 
       
-      <?php
+   <?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
 //$stmt->execute();
-?>
+?>   
       
       <tr>
        <td>   
@@ -74,7 +70,13 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     </form>
        </td>
     </tr> 
-      
+       
+      <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC");
+//$stmt->execute();
+?>
+
       
  <tr>
        <td>   
