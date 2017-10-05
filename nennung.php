@@ -28,7 +28,7 @@
       echo "Veranstaltung: "       . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
    
 	$statement = $pdo->prepare("INSERT INTO nennungen (nachname, vorname, geburtstag, country, dmc, verein, transponder_id1, car_id1, transponder_id2, car_id2, klasse, email, veranstaltung) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-      	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"], $_POST["dmc"], $_POST["verein"], $_POST["transponder_id1"], $_POST["klasse"], $_POST["email"], $_POST["car_id1"], $_POST["veranstaltung"], $_POST["transponder_id2"], $_POST["car_id2"], $_POST["land"]));
+      	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"], $_POST["country"], $_POST["dmc"], $_POST["verein"], $_POST["transponder_id1"], $_POST["car_id1"], $_POST["transponder_id2"], $_POST["car_id2"], $_POST["klasse"], $_POST["email"], $_POST["veranstaltung"]));
 	
 		
 	$pdo = null;
