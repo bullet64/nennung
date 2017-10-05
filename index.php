@@ -103,6 +103,8 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        </td>
     </tr> 
 
+print $land
+
     <tr>
            <td>DMC-Nr</td>
            <td><input pattern="^[0-9]{4}$" name="dmc" size="6" type="number" min="1" max="9999"></td>
