@@ -27,8 +27,8 @@
       echo "Meldedatum: " 	   . htmlspecialchars($meldedatum) . "<br>";
       echo "Veranstaltung: "       . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
    
-	$statement = $pdo->prepare("INSERT INTO nennungen (nachname, vorname, geburtstag, dmc, verein, transponder_id1, car_id1, transponder_id2, car_id2, klasse, email, veranstaltung) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-      	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"], $_POST["dmc"], $_POST["verein"], $_POST["transponder_id1"], $_POST["car_id1"], $_POST["transponder_id2"], $_POST["car_id2"], $_POST["klasse"], $_POST["email"], $_POST["meldedatum"], $_POST["veranstaltung"]));
+	$statement = $pdo->prepare("INSERT INTO nennungen (nachname, vorname, geburtstag, land, dmc, verein, transponder_id1, car_id1, transponder_id2, car_id2, klasse, email, veranstaltung) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+      	$statement->execute(array($_POST["nachname"], $_POST["vorname"], $_POST["geburtstag"], $_POST["land"], $_POST["dmc"], $_POST["verein"], $_POST["transponder_id1"], $_POST["car_id1"], $_POST["transponder_id2"], $_POST["car_id2"], $_POST["klasse"], $_POST["email"], $_POST["meldedatum"], $_POST["veranstaltung"]));
 	
 		
 	$pdo = null;
