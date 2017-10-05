@@ -41,7 +41,7 @@ $sql = "SELECT * FROM nennungen";
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
      // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.
-     $abfrage[] = $row['veranstaltung'] . "," . $row['vorname'] . "," . $row['nachname'];
+     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $row['geburtstag'] . "," . $row['verein'];
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
