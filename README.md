@@ -1,7 +1,7 @@
 # NennTool v0.1
 Ein kleines Nenntool um sich zu einer Rennveranstaltung anzumelden (http://nrw-cup-or.de)
 
-- Nennformular
+- [x] Nennformular
 - Eintrag in DB
 - Abfrage aller Teilnehmer incl. Meldedatum
 - Abfrage Klasse Hobby
