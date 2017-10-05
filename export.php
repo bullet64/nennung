@@ -41,7 +41,14 @@ $sql = "SELECT * FROM nennungen";
 //Schleife zur Ausgabe der Daten
 foreach ($pdo->query($sql) as $row) {
      // Abfrage bauen für den Export. Evt. müssen ein paar Daten angepasst werden.
-     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $row['geburtstag'] . "," . $row['verein'];
+    
+	//Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
+	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+			$datum = $row['geburtstag']; // Geburtsdatum
+			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
+			$erg_geburtstag = $array[2].'.'.$array[1].'.'.$array[0];
+	   
+     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $row['erg_geburtstag'] . "," . $row['verein'];
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
