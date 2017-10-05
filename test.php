@@ -66,5 +66,11 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     </form>
        </td>
     </tr> 
+      
+      <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+   </tr>
      
      </body>
