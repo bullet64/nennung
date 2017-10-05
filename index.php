@@ -50,7 +50,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       
       <tr>
        <td>   
-       
+       <form action="#">
           <label>Veranstaltung
         <td><select name="veranstaltung">
            <option></option>
