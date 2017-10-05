@@ -6,6 +6,8 @@
 </head>
 <body><p>
    <?php
+	
+      error_reporting(E_ALL);
 
       $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
       $meldedatum = date("d.m.Y, H:i"); 
