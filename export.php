@@ -46,9 +46,9 @@ foreach ($pdo->query($sql) as $row) {
 	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
 			$datum = $row['geburtstag']; // Geburtsdatum
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
-			$erg_geburtstag = $array[2].'.'.$array[1].'.'.$array[0];
+			$erg = $array[2].'.'.$array[1].'.'.$array[0];
 	   
-     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $row['erg_geburtstag'] . "," . $row['verein'];
+     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $row['erg'] . "," . $row['verein'];
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
