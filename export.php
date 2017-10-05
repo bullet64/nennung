@@ -6,7 +6,8 @@
 $abfrage = array();
 $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
-
+$frequenz = 5
+	
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
     if (is_writable($filename)) {
@@ -48,7 +49,7 @@ foreach ($pdo->query($sql) as $row) {
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg_geburtstag = $array[2].'.'.$array[1].'.'.$array[0];
 	   
-     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $erg_geburtstag . "," . $row['verein'];
+     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $erg_geburtstag . "," . $row['verein'] . "," . $frequenz;
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
