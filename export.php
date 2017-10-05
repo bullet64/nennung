@@ -49,7 +49,7 @@ foreach ($pdo->query($sql) as $row) {
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg_geburtstag = $array[2].'.'.$array[1].'.'.$array[0];
 	   
-     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $erg_geburtstag . "," . $row['verein'] . "," . $frequenz . "," . $row['transponder_id1'] . "," . $row['car_id1'] . "," . $row['transponder_id2'] . "," . $row['car_id2'] . "," . $row['meldedatum'];
+     $abfrage[] = $row['veranstaltung'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $erg_geburtstag . "," . $row['verein'] . "," . $frequenz . "," . $row['transponder_id1'] . "," . $row['car_id1'] . "," . $row['transponder_id2'] . "," . $row['car_id2'] . "," . $row['meldedatum'] . "," . $row['dmc'];
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
