@@ -50,7 +50,30 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        </td>
     </tr> 
       
+      <?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
       
+      <tr>
+       <td>   
+       <form action="nennung.php">
+          <label>Veranstaltung
+        <td><select name="veranstaltung">
+           <option></option>
+            <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option><?php echo htmlspecialchars($result) ?></option>
+                  <?php
+                    } 
+                 $pdo = null; ?>
+                
+             </select>
+      </label>
+    </form>
+       </td>
+    </tr> 
       
       
  <tr>
