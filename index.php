@@ -91,7 +91,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       
     <tr>
        <td>   
-       
+       <form action="#">
           <label>Land
         <td><select name="land">
           <option>DE</option>
@@ -99,7 +99,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
            <option>BE</option></td>
         </select>
           </label>
-    
+    </form>
        </td>
     </tr> 
 
@@ -122,7 +122,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
       
       <tr>
        <td>   
-       
+       <form action="#">
           <label>Verein
         <td><select name="verein">
            <option></option>
@@ -135,7 +135,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
                 
              </select>
       </label>
-    
+          </form>
        </td>
     </tr>     
       
@@ -164,14 +164,14 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
       
     <tr>
        <td>   
-      
+      <form action="#">
           <label>Klasse
         <td><select name="klasse">
           <option>OR8 Hobby</option>
           <option>OR8 Top</option>
           </select>
       </label>
-   
+          </form>
        </td>
     </tr> 
 
