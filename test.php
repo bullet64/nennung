@@ -91,7 +91,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
                 
              </select>
       </label>
-    </form>
+    
        </td>
     </tr> 
        
