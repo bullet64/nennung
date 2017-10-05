@@ -15,7 +15,16 @@
       echo "Nachname: "            . htmlspecialchars($_POST["nachname"]) . "<br>";
       echo "Vorname: "             . htmlspecialchars($_POST["vorname"]) . "<br>";
       echo "Geburtstag: "          . htmlspecialchars($_POST["geburtstag"]) . "<br>";
+      
+     if (isset($_POST['land']) and !empty($_POST['land'])) {
+
+    	$Land = $_POST['land'];
+    	echo "Land: "		   . htmlspecialchars($post[$Land]) . "<br>";
+}
+else {echo "Es wurde kein Wert für Farbe übergeben.";
+}
       echo "Land: "		   . htmlspecialchars($post["land"]) . "<br>";		
+      
       echo "DMC-Nr.: "             . htmlspecialchars($_POST["dmc"]) . "<br>";
       echo "Verein: "              . htmlspecialchars($_POST["verein"]) . "<br>";
       echo "Transponder-ID Nr.1: " . htmlspecialchars($_POST["transponder_id1"]) . "<br>";
