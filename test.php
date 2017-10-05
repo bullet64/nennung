@@ -53,6 +53,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
        <form action="nennung.php">
           <label>Land
         <td><select name="land">
+           <option></option>
           <option>DE</option>
           <option>NL</option>
            <option>BE</option></td>
