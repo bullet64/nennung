@@ -1,8 +1,8 @@
 # NennTool v0.1
-Ein kleines Nenntool um sich zu einer Rennveranstaltung anzumelden (http://nrw-cup-or.de)
+## Ein kleines Nenntool um sich zu einer Rennveranstaltung anzumelden (http://nrw-cup-or.de)
 
 - [x] Nennformular
-- Eintrag in DB
+- [x] Eintrag in DB
 - Abfrage aller Teilnehmer incl. Meldedatum
 - Abfrage Klasse Hobby
 - Abfrage Klasse Top
@@ -15,5 +15,5 @@ Geplante Erweiterungen:
 - online Bezahlmöglichkeit mit Monero ;)
 und was mir noch so einfällt ;)
 
-Achtung, das sind meine ersten Programmierexperimente! Wenn ihr das benutzen möchtet, bitte schön, aber auf eigenes Risiko!
+Achtung, das sind meine ersten Programmierexperimente! Wenn ihr das benutzen möchtet, bitte schön, aber auf eigenes Risiko! :+1:
 
