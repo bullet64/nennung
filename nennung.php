@@ -15,7 +15,7 @@
       echo "Nachname: "            . htmlspecialchars($_POST["nachname"]) . "<br>";
       echo "Vorname: "             . htmlspecialchars($_POST["vorname"]) . "<br>";
       echo "Geburtstag: "          . htmlspecialchars($_POST["geburtstag"]) . "<br>";
-      echo "Land: "		   . htmlspecialchars($post['land']) . "<br>";		
+      echo "Land: "		   . htmlspecialchars($_POST['land']) . "<br>";		
       echo "DMC-Nr.: "             . htmlspecialchars($_POST["dmc"]) . "<br>";
       echo "Verein: "              . htmlspecialchars($_POST["verein"]) . "<br>";
       echo "Transponder-ID Nr.1: " . htmlspecialchars($_POST["transponder_id1"]) . "<br>";
