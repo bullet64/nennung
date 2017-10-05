@@ -49,7 +49,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
                 
              </select>
       </label>
-          </form>
+         
        </td>
     </tr>                 
    
