@@ -6,7 +6,7 @@
 $abfrage = array();
 $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
-$frequenz = 5
+$frequenz = 5;
 	
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
