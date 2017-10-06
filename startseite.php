@@ -40,9 +40,9 @@
       
       <section class="vpn">
       	<h2>VPN</h2>
-        
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
       </section>
-	    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+	    
 	   <section class="mobil">
       	<h2>Mobilfunk</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
