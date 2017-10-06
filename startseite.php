@@ -7,7 +7,10 @@
    <meta charset="utf-8">
    <title>Startseite Nennsystem BETA v0.1</title>
  
-
+<script>
+	$('<td>').append('<a href="/Employee/Edit/'
+        +parseInt(element.id)+'">Edit</a> |');
+	</script>
 	 
    
 </head>
@@ -51,7 +54,7 @@
 	  $sql = "SELECT * FROM veranstaltungen WHERE aktiv = 1 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
-    <tr>
+    <tr id="row">
        
 	<?php
         //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
