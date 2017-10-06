@@ -1,9 +1,4 @@
-function trclick(){console.log('tr clicked')};
 
-function tdclick(event){
-    console.log('td clicked'); 
-    event.stopPropagation()
-};
 
 <!DOCTYPE html>
 <html>
@@ -11,7 +6,16 @@ function tdclick(event){
    <link rel="stylesheet" href="stylesheet2.css">
    <meta charset="utf-8">
    <title>Startseite Nennsystem BETA v0.1</title>
-   
+ 
+<script>
+	function trclick(){console.log('tr clicked')};
+
+function tdclick(event){
+    console.log('td clicked'); 
+    event.stopPropagation()
+};
+	</script>
+	 
    
 </head>
 
