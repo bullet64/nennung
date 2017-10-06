@@ -3,7 +3,7 @@
 <head>
    <link rel="stylesheet" href="stylesheet2.css">
    <meta charset="utf-8">
-   <title>10. NRW-Cup 2018, Anmeldung BETA v0.1</title>
+   <title>Startseite Nennsystem BETA v0.1</title>
    
    
 </head>
@@ -29,59 +29,88 @@
    <p style="text-align:center">Die Startgebühr ist <b>VOR</b> dem Wettkampftag zu entrichten.</br>
     Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
 
+<table>
+<caption>Teilnehmerliste</caption>
+  <tbody>
+	  <tr>
+		  <th>ID</th>
+		  <th>Nachname</th>
+		  <th>Vorname</th>
+		  <th>Geburtstag</th>
+		  <th>DMC</th>
+		  <th>Verein</th>
+		  <th>Transponder_ID1</th>
+		  <th>Car_ID1</th>
+		  <th>Transponder ID2</th>
+		  <th>Car_ID2</th>
+		  <th>Klasse</th>
+		  <th>EMail</th>
+		  <th>Veranstaltung</th>
+		  <th>Land</th>		  
+		  <th>Nenndatum</th>
+		  		  	
+	  </tr>
+	  
+    <?php foreach ($pdo->query($sql) as $row) : ?>
+    <tr>
+       <td><?=$row['id']?></td>
+       <td><?=$row['nachname']?></td>
+       <td><?=$row['vorname']?></td>
 
-   
+	<?php
+	//Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
+	//$_POST["geburtstag"] Geburtsdatum (2017-09-27
+			$datum = $row['geburtstag']; // Geburtsdatum
+			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
+			$erg = $array[2].'.'.$array[1].'.'.$array[0];
+	    ?>
+    	<td><?=$erg?></td>
+	
+	    
+	<td><?=$row['dmc']?></td>
+	<td><?=$row['verein']?></td>
+	<td><?=$row['transponder_id1']?></td>
+	<td><?=$row['car_id1']?></td>
+	<td><?=$row['transponder_id2']?></td>
+	<td><?=$row['car_id2']?></td>
+	<td><?=$row['klasse']?></td>
+	<td><?=$row['email']?></td>
+	<td><?=$row['veranstaltung']?></td>
+	<td><?=$row['land']?></td>
+		    
+	 <?php
+	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
+	
+			$m_date = $row['meldedatum']; // Meldedatum
+			$date = substr($m_date, -19, 10);
+			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
+			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
+			$uhrzeit = substr($m_date, -8, 8);
+			$ergx = $erg_datum . " " . $uhrzeit;
+		
+	    ?>   
+	<td><?=$ergx?></td>
+	 
+	    
+	  </tr>
+    <?php endforeach;
+	  
+// Die Verbindung wie folgt schließen
+$pdo = null;	?>  
+  </tbody>
 
-  
-
-
-   
-    
-    
-   <table>
-     
-      
-   
-   <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT nennungen FROM nennug");
-//$stmt->execute();
-?>
-      
-      <tr>
-       <td>   
-       <form action="nennung.php">
-          <label>Veranstaltung
-        <td><select name="veranstaltung">
-           <option></option>
-            <?php
-                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
-                 <option><?php echo htmlspecialchars($result) ?></option>
-                  <?php
-                    } 
-                 $pdo = null; ?>
-                
-             </select>
-      </label>
-    
-       </td>
-    </tr> 
-
-   
-
-  
-      
-      
-   
-  <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC");
-//$stmt->execute();
-?>
-      
-     
- </table>
-
- </form> 
+<table>
+		
 </body>
+
 </html>
+
+   
+
+  
+
+
+   
+    
+    
+  
