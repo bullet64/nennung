@@ -62,7 +62,7 @@
        <td><?=$row['teilnehmer']?></td>
     </tr>
 	  
-    <?php endforeach;
+    <?php endforeach;?>
 	  
 
   </tbody>
