@@ -64,8 +64,7 @@
 	  
     <?php endforeach;
 	  
-// Die Verbindung wie folgt schließen
-$pdo = null;	?>  
+
   </tbody>
 
 </table>
