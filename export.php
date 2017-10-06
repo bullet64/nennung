@@ -3,9 +3,12 @@
 //Definitionen
 $abfrage = array();
 $filename = 'export.csv';
-$header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
+$header2 = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 $frequenz = 5;
-	
+
+//Header Alle Komma's gegen ; ersetzen
+$header = str_replace(",", ";", $header2);
+
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
     if (is_writable($filename)) {
