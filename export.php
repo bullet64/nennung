@@ -5,7 +5,7 @@
 //Definitionen
 $abfrage = array();
 $filename = 'export.csv';
-$header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
+$header = array("Section";"Lastname";"Firstname";"Country";"EMail";"Birthday";"Club";"Active Frequency";"Transponder Nr 1";"CarId 1";"Transponder Nr 2";"CarId 2";"Registration";"Licence");
 $frequenz = 5;
 	
 //Header in Datei schreiben
@@ -49,7 +49,7 @@ foreach ($pdo->query($sql) as $row) {
 			$array = explode("-",$datum); //Datum zerlegen (2013-08-22)
 			$erg_geburtstag = $array[2].'.'.$array[1].'.'.$array[0];
 	   
-     $abfrage[] = $row['klasse'] . "," . $row['nachname'] . "," . $row['vorname'] . "," . $row['land'] . "," . $row['email'] . "," . $erg_geburtstag . "," . $row['verein'] . "," . $frequenz . "," . $row['transponder_id1'] . "," . $row['car_id1'] . "," . $row['transponder_id2'] . "," . $row['car_id2'] . "," . $row['meldedatum'] . "," . $row['dmc'];
+     $abfrage[] = $row['klasse'] . ";" . $row['nachname'] . ";" . $row['vorname'] . ";" . $row['land'] . ";" . $row['email'] . ";" . $erg_geburtstag . ":" . $row['verein'] . ";" . $frequenz . ";" . $row['transponder_id1'] . ";" . $row['car_id1'] . ";" . $row['transponder_id2'] . ";" . $row['car_id2'] . ";" . $row['meldedatum'] . ";" . $row['dmc'];
     
      // Daten schreiben
     // Sichergehen, dass die Datei existiert und beschreibbar ist.
