@@ -52,7 +52,7 @@ foreach ($pdo->query($sql) as $row) {
             exit;
     }
     
-        // Schreibe $abfrage in die geöffnete Datei.
+        // Schreibe $abfrage in die geöffnete Datei. str_replace ersetzt alle , gegen ;
         $fp = fopen($filename, 'a'); 
         foreach($abfrage as $values)
 		$csv_semikolon = str_replace(",", ";", $values);
