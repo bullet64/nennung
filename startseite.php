@@ -9,7 +9,7 @@
  
 <script>
 	$('<td>').append('<a href="/Employee/Edit/'
-        +parseInt(element.id)+'">Edit</a> |');
+        +parseInt(row)+'">Edit</a> |');
 	</script>
 	 
    
