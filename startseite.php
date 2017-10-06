@@ -39,7 +39,7 @@
 	  <tr>
 		  <th>Datum</th>
 		  
-		  <a href="nennung.php"><th>Veranstaltung</th></a>
+		  <th>Veranstaltung</th></a>
 		  
 		  <th>Teilnehmer max.</th>		  
 		  <th>Meldungen</th>
@@ -59,7 +59,7 @@
                         $erg = $array[2].'.'.$array[1].'.'.$array[0];
             ?>
        <td><?=$erg?></td>
-	<td><?=$row['veranstaltung']?></td>
+	<a href="nennung.php"><td><?=$row['veranstaltung']?></td></a>
        <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
     </tr>
