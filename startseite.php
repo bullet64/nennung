@@ -40,50 +40,7 @@
       
       <section class="vpn">
       	<h2>VPN</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-      
-      <section class="mobil">
-      	<h2>Mobilfunk</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-      
-      <section class="cloud">
-      	<h2>Cloud Produkte</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-      
-      <section class="sprach">
-      	<h2>Sprach -und Datenleitung</h2><!--evtl kann man das Icon als Sonderzeichen "unicode e059" in ein :after pseudo-Element packen, dass dann besser Skaliert werden kann.-->
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-    </article><!--content-->
-   
- 
-<nav id="navigation">
-    <ul>
-      	<li><a href="1-unterseite.html" id="mobilenavstart">Home</a></li>
-        <li><a href="1-unterseite.html">Unternehmen</a></li>
-        <li><a href="1-unterseite.html">Leitungen</a>
-        	<ul>
-				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
-				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
-                <li><a href="1-unterseite.html">Unterpunkt drei</a></li>
-            </ul></li>
-        <li><a href="1-unterseite.html">VPN</a></li>
-        <li><a href="1-unterseite.html">Mobilfunk</a>
-        	<ul>
-				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
-				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
-          		<li><a href="1-unterseite.html">Unterpunkt drei</a></li>
-          		<li><a href="1-unterseite.html">Unterpunkt vier</a></li>
-        	</ul></li>
-        <li><a href="2-kontakt.html">Kontakt</a></li>
-    </ul>
-</nav>
-  
-<section class="tabelle">
-<table>
+        <table>
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
@@ -160,7 +117,50 @@ $pdo = null;	?>
   </tbody>
 
 </table>
-	</section>
+      </section>
+      
+      <section class="mobil">
+      	<h2>Mobilfunk</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+      
+      <section class="cloud">
+      	<h2>Cloud Produkte</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+      
+      <section class="sprach">
+      	<h2>Sprach -und Datenleitung</h2><!--evtl kann man das Icon als Sonderzeichen "unicode e059" in ein :after pseudo-Element packen, dass dann besser Skaliert werden kann.-->
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+    </article><!--content-->
+   
+ 
+<nav id="navigation">
+    <ul>
+      	<li><a href="1-unterseite.html" id="mobilenavstart">Home</a></li>
+        <li><a href="1-unterseite.html">Unternehmen</a></li>
+        <li><a href="1-unterseite.html">Leitungen</a>
+        	<ul>
+				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
+				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
+                <li><a href="1-unterseite.html">Unterpunkt drei</a></li>
+            </ul></li>
+        <li><a href="1-unterseite.html">VPN</a></li>
+        <li><a href="1-unterseite.html">Mobilfunk</a>
+        	<ul>
+				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
+				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
+          		<li><a href="1-unterseite.html">Unterpunkt drei</a></li>
+          		<li><a href="1-unterseite.html">Unterpunkt vier</a></li>
+        	</ul></li>
+        <li><a href="2-kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+  
+
+
+	
 </main>  
 <footer>
     <p>
