@@ -38,9 +38,9 @@ $sql = "SELECT * FROM nennungen";
 		  <th>DMC</th>
 		  <th>Verein</th>
 		  <th>Transponder_ID1</th>
-		  <th>Car_ID1>/th>
+		  <th>Car_ID1</th>
 		  <th>Transponder ID2</th>
-		  <th>Car_ID2>/th>
+		  <th>Car_ID2</th>
 		  <th>Klasse</th>
 		  <th>EMail</th>
 		  <th>Nenndatum</th>
