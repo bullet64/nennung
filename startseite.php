@@ -58,7 +58,7 @@
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
       </section> 
       
-     <table>
+     <table align=center>
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
