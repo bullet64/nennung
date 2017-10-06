@@ -8,10 +8,12 @@
    <title>Startseite Nennsystem BETA v0.1</title>
  
 <script type="text/javascript">
-    document.getElementById("row").onclick = function () {
-        location.href = "nennung.php";
-    };
-</script> 
+    function redirect()
+    {
+    var url = "nennung.php";
+    window.location(url);
+    }
+    </script>
    
 </head>
 
@@ -65,7 +67,7 @@
             ?>
        <td><?=$erg?></td>
 	  
-	    <td onclicl="location.href = 'nennung.php';" id="row"class="float-left submit-button" ><?=$row['veranstaltung']?></td>
+	    <td name="redirect" onClick="redirect()"><?=$row['veranstaltung']?></td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
