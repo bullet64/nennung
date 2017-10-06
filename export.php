@@ -54,11 +54,14 @@ foreach ($pdo->query($sql) as $row) {
     
         // Schreibe $abfrage in die geöffnete Datei.
         $fp = fopen($filename, 'a'); 
-        foreach($abfrage as $values) fputs($fp, $values."\n"); 
+        foreach($abfrage as $values)
+		fputs($fp, $values."\n"); 
         fclose($fp); 
     } else {
         print "Die Datei $filename ist nicht schreibbar";
     }
+	
+    
     // Das Array wieder leeren!
     $abfrage = array();
     }
