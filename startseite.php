@@ -22,7 +22,7 @@
 </nav>
 
 	<?php include ("connect.php");
-$sql = "SELECT * FROM veranstaltungen ORDER BY datum";
+$sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
 
 	
 //$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
