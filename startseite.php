@@ -58,7 +58,7 @@
             ?>
        <td><?=$erg?></td>
 	    
-	<?php> echo '<a href="nennung.php"> ?> <td><?=$row['veranstaltung']?></td> <?php </a>' ?>
+	<?php> echo " ?> <a href="nennung.php"><td><?=$row['veranstaltung']</td> <?php </a>" ?>
        
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
