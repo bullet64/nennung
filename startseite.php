@@ -58,7 +58,7 @@
             ?>
        <td><?=$erg?></td>
 	    
-	<td><?=$row['veranstaltung']</td>
+	<td><?=$row['veranstaltung']?></td>
        
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
