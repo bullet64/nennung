@@ -6,9 +6,6 @@ $filename = 'export.csv';
 $header = array("Section","Lastname","Firstname","Country","EMail","Birthday","Club","Active Frequency","Transponder Nr 1","CarId 1","Transponder Nr 2","CarId 2","Registration","Licence");
 $frequenz = 5;
 
-//Header Alle Komma's gegen ; ersetzen
-//$header = str_replace(",", ";", $header2);
-
 //Header in Datei schreiben
 // Sichergehen, dass die Datei existiert und beschreibbar ist.
     if (is_writable($filename)) {
@@ -58,8 +55,8 @@ foreach ($pdo->query($sql) as $row) {
         // Schreibe $abfrage in die geöffnete Datei.
         $fp = fopen($filename, 'a'); 
         foreach($abfrage as $values)
-		$csv_komma = str_replace(",", ";", $values);
-		fputs($fp, $csv_komma."\n"); 
+		$csv_semikolon = str_replace(",", ";", $values);
+		fputs($fp, $csv_semikolon."\n"); 
         fclose($fp); 
     } else {
         print "Die Datei $filename ist nicht schreibbar";
