@@ -58,7 +58,7 @@ function tdclick(event){
 	  $sql = "SELECT * FROM veranstaltungen WHERE aktiv = 1 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
-    <tr onclick='trclick();'>>
+    <tr onclick='trclick();'>
        
 	<?php
         //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
