@@ -21,13 +21,7 @@
   </ul>
 </nav>
 
-	<?php include ("connect.php");
-$sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
-
-	
-//$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
-//$stmt->execute();
-?>
+<?php include ("connect.php");?>
 
 	
 	
@@ -49,7 +43,10 @@ $sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
 		  <th>Meldungen</th>
 	  </tr>
 	  
-    <?php foreach ($pdo->query($sql) as $row) : ?>
+    <?php
+	  $sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
+
+	  foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        
 	<?php
@@ -83,7 +80,10 @@ $pdo = null;	?>
 		  <th>Meldungen</th>
 	  </tr>
 	  
-    <?php foreach ($pdo->query($sql) as $row) : ?>
+    <?php 
+	  $sql = "SELECT * FROM veranstaltungen WHERE id = 0 ORDER BY datum";
+
+	  foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        
 	<?php
