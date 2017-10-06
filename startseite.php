@@ -64,7 +64,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
        <td><?=$row['teilnehmer_max']?></td>
        
 	<?php
-$pdo1 = new PDO('mysql:host=localhost;dbname='nennung', 'bullet64', 'xt19Zkl');
+
 
 $statement = $pdo1->prepare("SELECT COUNT(*) AS anzahl FROM nennungen");
 $statement->execute();  
