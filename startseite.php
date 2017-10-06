@@ -38,7 +38,9 @@
   <tbody>
 	  <tr>
 		  <th>Datum</th>
-		  <th>Veranstaltung</th>
+		  
+		  <a href="nennung.php"><th>Veranstaltung</th></a>
+		  
 		  <th>Teilnehmer max.</th>		  
 		  <th>Meldungen</th>
 	  </tr>
