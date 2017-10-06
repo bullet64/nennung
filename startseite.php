@@ -61,7 +61,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
             ?>
        <td><?=$erg?></td>
 	<td><?=$row['veranstaltung']?></td>
-       <td><?=$row['nachname']?></td>
+       <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['vorname']?></td>
     </tr>
 	  
