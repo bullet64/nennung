@@ -32,16 +32,19 @@ $sql = "SELECT * FROM nennungen";
   <tbody>
 	  <tr>
 		  <th>ID</th>
-		  <th>Name</th>
 		  <th>Vorname</th>
+		  <th>Nachname</th>
 		  <th>Geburtstag</th>
 		  <th>DMC</th>
 		  <th>Verein</th>
-		  <th>Transponder_ID</th>
+		  <th>Transponder_ID1</th>
+		  <th>Car_ID1>/th>
+		  <th>Transponder ID2</th>
+		  <th>Car_ID2>/th>
 		  <th>Klasse</th>
 		  <th>EMail</th>
-		  <th>Car_ID</th>
 		  <th>Nenndatum</th>
+		  <th>Land</th>
 		  <th>Veranstaltung</th>
 		  		  	
 	  </tr>
@@ -49,8 +52,8 @@ $sql = "SELECT * FROM nennungen";
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        <td><?=$row['id']?></td>
-       <td><?=$row['nachname']?></td>
        <td><?=$row['vorname']?></td>
+       <td><?=$row['nachname']?></td>
 
 	<?php
 	//Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
@@ -65,12 +68,14 @@ $sql = "SELECT * FROM nennungen";
 	<td><?=$row['dmc']?></td>
 	<td><?=$row['verein']?></td>
 	<td><?=$row['transponder_id1']?></td>
+	<td><?=$row['car_id1']?></td>
+	<td><?=$row['transponder_id2']?></td>
+	<td><?=$row['car_id2']?></td>
 	<td><?=$row['klasse']?></td>
 	<td><?=$row['email']?></td>
-	<td><?=$row['car_id1']?></td>
-	  
-	    
-	    
+	<td><?=$row['veranstaltung']?></td>
+	<td><?=$row['land']?></td>
+		    
 	 <?php
 	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
 	
@@ -83,7 +88,7 @@ $sql = "SELECT * FROM nennungen";
 		
 	    ?>   
 	<td><?=$ergx?></td>
-	<td><?=$row['veranstaltung']?></td> 
+	 
 	    
 	  </tr>
     <?php endforeach;
