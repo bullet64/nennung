@@ -2,38 +2,59 @@
 
 <!DOCTYPE html>
 <html lang="de">
-<head>
-	 <title>Startseite Nennsystem BETA v0.1</title>
-<!-- Required meta tags -->
-	<meta charset="utf-8">
-	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <!-- Bootstrap CSS -->
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/style.css">
-	
-  
- 
+    <title>Jumbotron-Vorlage für Bootstrap</title>
 
-   
-</head>
+    <!-- Bootstrap-CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-<nav>
-   <ul>
-      <li><a href="http://192.168.3.243/nennung/index.php">Home</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage.php">Teilnehmerliste</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage_h.php">Klasse Hobby</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
-       <li><a href="http://192.168.3.243/nennung/admin.php">Admin</a></li>
-       <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
-          
-              
-  </ul>
-</nav>
+    <!-- Besondere Stile für diese Vorlage -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Nur für Testzwecke. Kopiere diese Zeilen nicht in echte Projekte! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Navigation ein-/ausblenden</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Projekt-Titel</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Passwort" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Anmelden</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
 
 <?php include ("connect.php");?>
 
