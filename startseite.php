@@ -57,9 +57,17 @@
                         $erg = $array[2].'.'.$array[1].'.'.$array[0];
             ?>
        <td><?=$erg?></td>
-	    
-	<td><?=$row['veranstaltung']?></td>
-       
+	  
+	    <td>
+	    <a href="/yourURL"></a>
+   <div class="item-container">
+      <img class="icon" src="/iconURL" />
+      <p class="name">  
+	<?=$row['veranstaltung']?>
+	     </p>
+   </div> 
+       </td>
+	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
     </tr>
