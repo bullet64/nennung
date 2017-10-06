@@ -64,9 +64,9 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
        <td><?=$row['teilnehmer_max']?></td>
        
 	    <?php
-$pdo1 = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-  
-$statement = $pdo1->prepare("SELECT * FROM nennung WHERE veranstaltung = ?");
+
+$sql = "SELECT * FROM nennung ORDER BY datum";  
+$statement = $pdo1->prepare("SELECT * FROM nennungen WHERE veranstaltung = ?");
 $statement->execute(array('Max')); 
 $anzahl_user = $statement->rowCount();
 echo "Es wurden $anzahl_user Benutzer gefunden";
