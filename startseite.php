@@ -37,10 +37,8 @@
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
-		  <th>Datum</th>
-		  
-		  <th>Veranstaltung</th></a>
-		  
+		  <th>Datum</th>		  
+		  <th>Veranstaltung</th>	  
 		  <th>Teilnehmer max.</th>		  
 		  <th>Meldungen</th>
 	  </tr>
@@ -59,8 +57,10 @@
                         $erg = $array[2].'.'.$array[1].'.'.$array[0];
             ?>
        <td><?=$erg?></td>
-	<a href="nennung.php"><td><?=$row['veranstaltung']?></td></a>
-       <td><?=$row['teilnehmer_max']?></td>
+	    
+	<?php> echo '<a href="nennung.php"> ?> <td><?=$row['veranstaltung']?></td> <?php </a>' ?>
+       
+	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
     </tr>
 	  
