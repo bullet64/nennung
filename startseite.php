@@ -1,60 +1,25 @@
-
-
 <!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Jumbotron-Vorlage für Bootstrap</title>
-
-    <!-- Bootstrap-CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Besondere Stile für diese Vorlage -->
-    <link href="jumbotron.css" rel="stylesheet">
-
-    <!-- Nur für Testzwecke. Kopiere diese Zeilen nicht in echte Projekte! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Navigation ein-/ausblenden</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Projekt-Titel</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Passwort" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Anmelden</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
+    <!--[if lte IE 8]>
+		 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+	<title>SelfHTML Design 05 - Cloud Com</title>
+</head>
+<body>
+	
+	<header>
+	<div id="kopf">
+    <a id="logo" href="index.html"><img src="img/logo.png" title="zurück zur Startseite!" alt="Webseiten Name"  height="48" width="238"></a>
+    <a id="navlink" title="zum Navigationsmenü" href="#mobilenavstart">☰</a>
+    </div>
+</header>
+	
+<main role="main">	
+	
+	
 
 <?php include ("connect.php");?>
 
@@ -62,12 +27,61 @@
 	
 <body>
 	
-   <p style="text-align:center">
-   <b>Nennsytem für RC-Car Rennen</b>
-   </p>
-
-   <p style="text-align:center">Die Startgebühr ist <b>VOR</b> dem Wettkampftag zu entrichten.</br>
-    Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
+   <section id="teaser">
+		<h1>Willkommen bei uns</h1>
+    	<p>Tart toffee icing croissant lemon drops chocolate tiramisu</p>
+    	<p>Pastry topping sugar plum topping tart</p>
+    	<p>Wafer dragée croissant carrot</p>
+    </section><!--teaser-->
+    
+    <article id="start">
+    	<h2 id="news">Aktuelle News:<span> 12.04.2012  </span>Unsere neue Webseite geht online!</h2>
+      
+      
+      <section class="vpn">
+      	<h2>VPN</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+      
+      <section class="mobil">
+      	<h2>Mobilfunk</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+      
+      <section class="cloud">
+      	<h2>Cloud Produkte</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+      
+      <section class="sprach">
+      	<h2>Sprach -und Datenleitung</h2><!--evtl kann man das Icon als Sonderzeichen "unicode e059" in ein :after pseudo-Element packen, dass dann besser Skaliert werden kann.-->
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </section>
+    </article><!--content-->
+   
+ 
+<nav id="navigation">
+    <ul>
+      	<li><a href="1-unterseite.html" id="mobilenavstart">Home</a></li>
+        <li><a href="1-unterseite.html">Unternehmen</a></li>
+        <li><a href="1-unterseite.html">Leitungen</a>
+        	<ul>
+				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
+				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
+                <li><a href="1-unterseite.html">Unterpunkt drei</a></li>
+            </ul></li>
+        <li><a href="1-unterseite.html">VPN</a></li>
+        <li><a href="1-unterseite.html">Mobilfunk</a>
+        	<ul>
+				<li><a href="1-unterseite.html">Unterpunkt eins</a></li>
+				<li><a href="1-unterseite.html">Unterpunkt zwei</a></li>
+          		<li><a href="1-unterseite.html">Unterpunkt drei</a></li>
+          		<li><a href="1-unterseite.html">Unterpunkt vier</a></li>
+        	</ul></li>
+        <li><a href="2-kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+  
 
 <table>
 <caption>Aktive Veranstaltungen</caption>
@@ -146,15 +160,14 @@ $pdo = null;	?>
   </tbody>
 
 </table>
-
- <!-- Bootstrap-JavaScript
-    ================================================== -->
-    <!-- Am Ende des Dokuments platziert, damit Seiten schneller laden -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10-Anzeigefenster-Hack für Fehler auf Surface und Desktop-Windows-8 -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+</main>  
+<footer>
+    <p>
+    	Design: <a href="http://designenlassen.de/">designenlassen.de</a><br/>
+   		technische Umsetzung: <a href="http://selfhtml.org">selfhtml.org</a>
+    </p>    
+</footer>  
+	
 </html>
 
 
