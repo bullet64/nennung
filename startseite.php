@@ -65,7 +65,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
        
 	    <?php
 
-$sql1 = mysqli_query("SELECT * FROM nennungen WHERE veranstaltung = ?");  
+$sql1 = mysqli_query("SELECT * FROM nennungen WHERE veranstaltung = 'mönchen*' ");  
 echo mysqli_num_rows($sql1);
 
 ?>
