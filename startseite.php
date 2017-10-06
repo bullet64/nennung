@@ -21,6 +21,14 @@
   </ul>
 </nav>
 
+	<?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
+
+	
+	
 <body>
    <p style="text-align:center">
    <b>Nennsytem für RC-Car Rennen</b>
@@ -30,30 +38,17 @@
     Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
 
 <table>
-<caption>Teilnehmerliste</caption>
+<caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
-		  <th>ID</th>
-		  <th>Nachname</th>
-		  <th>Vorname</th>
-		  <th>Geburtstag</th>
-		  <th>DMC</th>
-		  <th>Verein</th>
-		  <th>Transponder_ID1</th>
-		  <th>Car_ID1</th>
-		  <th>Transponder ID2</th>
-		  <th>Car_ID2</th>
-		  <th>Klasse</th>
-		  <th>EMail</th>
 		  <th>Veranstaltung</th>
-		  <th>Land</th>		  
-		  <th>Nenndatum</th>
-		  		  	
+		  <th>Teilnehmer max.</th>		  
+		  <th>Meldungen</th>
 	  </tr>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
-       <td><?=$row['id']?></td>
+       <td><?=$row['veranstaltung']?></td>
        <td><?=$row['nachname']?></td>
        <td><?=$row['vorname']?></td>
 
