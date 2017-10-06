@@ -66,7 +66,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 	<?php
 
 
-$statement = $pdo1->prepare("SELECT COUNT(*) AS anzahl FROM nennungen");
+$statement = $pdo1->prepare("SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = '1.NRW-Cup MÃ¶nchengladbach 2018'");
 $statement->execute();  
 $row = $statement->fetch();
 echo "Es wurden ".$row['anzahl']." User gefunden";
