@@ -7,14 +7,7 @@
    <meta charset="utf-8">
    <title>Startseite Nennsystem BETA v0.1</title>
  
-<script>
-	function trclick(){console.log('tr clicked')};
 
-function tdclick(event){
-    console.log('td clicked'); 
-    event.stopPropagation()
-};
-	</script>
 	 
    
 </head>
@@ -58,7 +51,7 @@ function tdclick(event){
 	  $sql = "SELECT * FROM veranstaltungen WHERE aktiv = 1 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
-    <tr onclick='trclick();'>
+    <tr>
        
 	<?php
         //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
@@ -69,7 +62,7 @@ function tdclick(event){
             ?>
        <td><?=$erg?></td>
 	  
-	    <td onclick='tdclick(event);'><?=$row['veranstaltung']?></td>
+	    <td><?=$row['veranstaltung']?></td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
