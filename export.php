@@ -56,7 +56,7 @@ foreach ($pdo->query($sql) as $row) {
         $fp = fopen($filename, 'a'); 
         foreach($abfrage as $values)
 		$csv_komma = str_replace(",", ";", $values);
-		fputs($fp, $values."\n"); 
+		fputs($fp, $vcsv_komma."\n"); 
         fclose($fp); 
     } else {
         print "Die Datei $filename ist nicht schreibbar";
