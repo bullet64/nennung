@@ -66,7 +66,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 	<?php
 
 
-$sql1 *= "SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = '1.NRW-Cup MÃ¶nchengladbach 2018' ";
+$sql1 *= "SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = 'TEST' ";
 
 echo "Es wurden ".$row['anzahl']." User gefunden";
 ?>    
