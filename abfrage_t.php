@@ -29,20 +29,22 @@ $sql = "SELECT * FROM nennungen WHERE klasse = 'OR8 Top'";
 <caption>Teilnehmerliste Top</caption>
   <tbody>
 	  <tr>
-		  <th>ID</th>
-		  <th>Name</th>
-		  <th>Vorname</th>
-		  <th>Geburtstag</th>
-		  <th>DMC</th>
-		  <th>Verein</th>
-		  <th>Transponder_ID</th>
-		  <th>Klasse</th>
-		  <th>EMail</th>
-		  <th>Car_ID</th>
-		  <th>Nenndatum</th>
-		  <th>Veranstaltung</th>
-		  		  	
-	  </tr>
+		 <th>ID</th>
+                  <th>Nachname</th>
+                  <th>Vorname</th>
+                  <th>Geburtstag</th>
+                  <th>DMC</th>
+                  <th>Verein</th>
+                  <th>Transponder_ID1</th>
+                  <th>Car_ID1</th>
+                  <th>Transponder ID2</th>
+                  <th>Car_ID2</th>
+                  <th>Klasse</th>
+                  <th>EMail</th>
+                  <th>Veranstaltung</th>
+                  <th>Land</th>           
+                  <th>Nenndatum</th>
+ 	  </tr>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
@@ -61,25 +63,30 @@ $sql = "SELECT * FROM nennungen WHERE klasse = 'OR8 Top'";
 	<td><?=$erg?></td>
 	
 	<td><?=$row['dmc']?></td>
-	<td><?=$row['verein']?></td>
-	<td><?=$row['transponder_id']?></td>
-	<td><?=$row['klasse']?></td>
-	<td><?=$row['email']?></td>
-	<td><?=$row['car_id']?></td>
+        <td><?=$row['verein']?></td>
+        <td><?=$row['transponder_id1']?></td>
+        <td><?=$row['car_id1']?></td>
+        <td><?=$row['transponder_id2']?></td>
+        <td><?=$row['car_id2']?></td>
+        <td><?=$row['klasse']?></td>
+        <td><?=$row['email']?></td>
+        <td><?=$row['veranstaltung']?></td>
+        <td><?=$row['land']?></td>
+
 	    
 	    <?php
 	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
 	
 			$m_date = $row['meldedatum']; // Meldedatum
-			$date = substr($m_date, 0, -16);
+			$date = substr($m_date, -19, 10);
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
-			$uhrzeit = substr($m_date, 11, -7);
+			$uhrzeit = substr($m_date, -8, 8);
 			$ergx = $erg_datum . " " . $uhrzeit;
 		
 	    ?>   
 	<td><?=$ergx?></td>
-	<td><?=$row['veranstaltung']?></td>
+	
 	    
 	  </tr>
     <?php endforeach;
