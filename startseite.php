@@ -65,7 +65,7 @@
             ?>
        <td><?=$erg?></td>
 	  
-	    <td><?=$row['veranstaltung']?></td>
+	    <td onclicl="location.href = 'nennung.php';" id="row"class="float-left submit-button" ><?=$row['veranstaltung']?></td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
