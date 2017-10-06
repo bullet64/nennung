@@ -66,7 +66,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 	<?php
 
 
-$sql1 *= "SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = TEST ";
+$sql1 = "SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = TEST ";
 
 echo "Es wurden ".$row['anzahl']." User gefunden";
 ?>    
