@@ -82,7 +82,7 @@
     </ul>
 </nav>
   
-
+<section class="tabelle">
 <table>
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
@@ -160,6 +160,7 @@ $pdo = null;	?>
   </tbody>
 
 </table>
+	</section>
 </main>  
 <footer>
     <p>
