@@ -71,7 +71,41 @@ $sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
 $pdo = null;	?>  
   </tbody>
 
-<table>
+</table>
+	
+	<table>
+<caption>Passive Veranstaltungen</caption>
+  <tbody>
+	  <tr>
+		  <th>Datum</th>
+		  <th>Veranstaltung</th>
+		  <th>Teilnehmer max.</th>		  
+		  <th>Meldungen</th>
+	  </tr>
+	  
+    <?php foreach ($pdo->query($sql) as $row) : ?>
+    <tr>
+       
+	<?php
+        //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
+        //$_POST["datum"] Geburtsdatum (2017-09-27
+                        $datum = $row['datum']; // Geburtsdatum
+                        $array = explode("-",$datum); //Datum zerlegen (2013-08-22)
+                        $erg = $array[2].'.'.$array[1].'.'.$array[0];
+            ?>
+       <td><?=$erg?></td>
+	<td><?=$row['veranstaltung']?></td>
+       <td><?=$row['teilnehmer_max']?></td>
+       <td><?=$row['teilnehmer']?></td>
+    </tr>
+	  
+    <?php endforeach;
+	  
+// Die Verbindung wie folgt schließen
+$pdo = null;	?>  
+  </tbody>
+
+</table>
 		
 </body>
 
