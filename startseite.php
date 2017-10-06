@@ -119,20 +119,7 @@ $pdo = null;	?>
 </table>
       </section>
       
-      <section class="mobil">
-      	<h2>Mobilfunk</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-      
-      <section class="cloud">
-      	<h2>Cloud Produkte</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
-      
-      <section class="sprach">
-      	<h2>Sprach -und Datenleitung</h2><!--evtl kann man das Icon als Sonderzeichen "unicode e059" in ein :after pseudo-Element packen, dass dann besser Skaliert werden kann.-->
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-      </section>
+     
     </article><!--content-->
    
  
