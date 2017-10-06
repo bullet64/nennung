@@ -7,11 +7,11 @@
    <meta charset="utf-8">
    <title>Startseite Nennsystem BETA v0.1</title>
  
-<script>
-	$('<td>').append('<a href="/Employee/Edit/'
-        +parseInt(row)+'">Edit</a> |');
-	</script>
-	 
+<script type="text/javascript">
+    document.getElementById("row").onclick = function () {
+        location.href = "nennung.php";
+    };
+</script> 
    
 </head>
 
