@@ -1,3 +1,10 @@
+function trclick(){console.log('tr clicked')};
+
+function tdclick(event){
+    console.log('td clicked'); 
+    event.stopPropagation()
+};
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +54,7 @@
 	  $sql = "SELECT * FROM veranstaltungen WHERE aktiv = 1 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
-    <tr>
+    <tr onclick='trclick();'>>
        
 	<?php
         //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
@@ -58,12 +65,7 @@
             ?>
        <td><?=$erg?></td>
 	  
-	    <td onclick="location.href='nennung.php';">
-	    
-	<?=$row['veranstaltung']?>
-	     
-  
-       </td>
+	    <td onclick='tdclick(event);'><?=$row['veranstaltung']?></td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
