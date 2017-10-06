@@ -25,6 +25,7 @@
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 
+	
 //$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
 //$stmt->execute();
 ?>
@@ -62,20 +63,7 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
        <td><?=$erg?></td>
 	<td><?=$row['veranstaltung']?></td>
        <td><?=$row['teilnehmer_max']?></td>
-       
-	<?php
-
-
-$sql1 = "SELECT COUNT(*) AS anzahl FROM nennungen WHERE veranstaltung = TEST ";
-
-echo "Es wurden ".$row['anzahl']." User gefunden";
-?>    
-	    
-	    
-	    
-	    
-	    
-	    <td><?=$row['vorname']?></td>
+       <td><?=$row['teilnehmer']?></td>
     </tr>
 	  
     <?php endforeach;
