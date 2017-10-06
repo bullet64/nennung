@@ -44,6 +44,7 @@ $sql = "SELECT * FROM veranstaltungen";
   <tbody>
 	  <tr>
 		  <th>Veranstaltung</th>
+		  <th>Datum</th>
 		  <th>Teilnehmer max.</th>		  
 		  <th>Meldungen</th>
 	  </tr>
@@ -51,6 +52,7 @@ $sql = "SELECT * FROM veranstaltungen";
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        <td><?=$row['veranstaltung']?></td>
+	<td><?=$row['datum']?></td>
        <td><?=$row['nachname']?></td>
        <td><?=$row['vorname']?></td>
     </tr>
