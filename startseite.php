@@ -43,15 +43,15 @@ $sql = "SELECT * FROM veranstaltungen";
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
-		  <th>Veranstaltung</th>
 		  <th>Datum</th>
+		  <th>Veranstaltung</th>
 		  <th>Teilnehmer max.</th>		  
 		  <th>Meldungen</th>
 	  </tr>
 	  
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
-       <td><?=$row['veranstaltung']?></td>
+       
 	<?php
         //Geburtstag zerlegen! Result = 28.08.1964 Input = 2017-09-27
         //$_POST["datum"] Geburtsdatum (2017-09-27
@@ -59,8 +59,8 @@ $sql = "SELECT * FROM veranstaltungen";
                         $array = explode("-",$datum); //Datum zerlegen (2013-08-22)
                         $erg = $array[2].'.'.$array[1].'.'.$array[0];
             ?>
-        <td><?=$erg?></td>
-
+       <td><?=$erg?></td>
+	<td><?=$row['veranstaltung']?></td>
        <td><?=$row['nachname']?></td>
        <td><?=$row['vorname']?></td>
     </tr>
