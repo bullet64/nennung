@@ -40,7 +40,10 @@
       
       <section class="vpn">
       	<h2>VPN</h2>
-        <table>
+        
+      </section>
+      
+     <table>
 <caption>Aktive Veranstaltungen</caption>
   <tbody>
 	  <tr>
@@ -117,9 +120,6 @@ $pdo = null;	?>
   </tbody>
 
 </table>
-      </section>
-      
-     
     </article><!--content-->
    
  
