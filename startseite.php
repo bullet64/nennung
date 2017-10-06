@@ -7,13 +7,7 @@
    <meta charset="utf-8">
    <title>Startseite Nennsystem BETA v0.1</title>
  
-<script type="text/javascript">
-    function redirect()
-    {
-    var url = "nennung.php";
-    window.location(url);
-    }
-    </script>
+
    
 </head>
 
@@ -67,13 +61,16 @@
             ?>
        <td><?=$erg?></td>
 	  
-	    <td name="redirect" onClick="redirect()"><?=$row['veranstaltung']?></td>
+	    <td><?=$row['veranstaltung']?></td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
     </tr>
 	  
     <?php endforeach;?>
+	  
+	  
+	  <p><a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a></p>
 	  
 
   </tbody>
