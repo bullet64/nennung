@@ -32,8 +32,8 @@ $sql = "SELECT * FROM nennungen";
   <tbody>
 	  <tr>
 		  <th>ID</th>
-		  <th>Vorname</th>
 		  <th>Nachname</th>
+		  <th>Vorname</th>
 		  <th>Geburtstag</th>
 		  <th>DMC</th>
 		  <th>Verein</th>
@@ -52,8 +52,8 @@ $sql = "SELECT * FROM nennungen";
     <?php foreach ($pdo->query($sql) as $row) : ?>
     <tr>
        <td><?=$row['id']?></td>
-       <td><?=$row['vorname']?></td>
        <td><?=$row['nachname']?></td>
+       <td><?=$row['vorname']?></td>
 
 	<?php
 	//Geburtstags zerlegen! Result = 28.08.1964 Input = 2017-09-27
