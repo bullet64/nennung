@@ -58,14 +58,11 @@
             ?>
        <td><?=$erg?></td>
 	  
-	    <td>
-	    <a href="/yourURL"></a>
-   <div class="item-container">
-      <img class="icon" src="/iconURL" />
-      <p class="name">  
+	    <td onclick="location.href='nennung.php';">
+	    
 	<?=$row['veranstaltung']?>
-	     </p>
-   </div> 
+	     
+  
        </td>
 	
 	    <td><?=$row['teilnehmer_max']?></td>
