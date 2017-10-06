@@ -43,9 +43,9 @@ $sql = "SELECT * FROM nennungen";
 		  <th>Car_ID2</th>
 		  <th>Klasse</th>
 		  <th>EMail</th>
-		  <th>Nenndatum</th>
-		  <th>Land</th>
 		  <th>Veranstaltung</th>
+		  <th>Land</th>		  
+		  <th>Nenndatum</th>
 		  		  	
 	  </tr>
 	  
