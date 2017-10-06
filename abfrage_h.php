@@ -81,10 +81,10 @@ $sql = "SELECT * FROM nennungen WHERE klasse = 'OR8 Hobby' ";
 	//Meldedatum zerlegen! Input = 2017-09-30 21:18:46.735059
 	
 			$m_date = $row['meldedatum']; // Meldedatum
-			$date = substr($m_date, 0, -16);
+			$date = substr($m_date, -19, 10);
 			$teile = explode("-", $date); //Datum zerlegen (2013-08-22)
 			$erg_datum = $teile[2].'.'.$teile[1].'.'.$teile[0];
-			$uhrzeit = substr($m_date, 11, -7);
+			$uhrzeit = substr($m_date, -8, 8);
 			$ergx = $erg_datum . " " . $uhrzeit;
 		
 	    ?>   
