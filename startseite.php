@@ -63,12 +63,14 @@ $sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 	<td><?=$row['veranstaltung']?></td>
        <td><?=$row['teilnehmer_max']?></td>
        
-	    <?php
+	<?php
+$pdo = new PDO('mysql:host=localhost;dbname='nennung', 'bullet64', 'xt19Zkl');
 
-$sql1 = mysqli_query("SELECT * FROM nennungen WHERE veranstaltung = 'mönchen*' ");  
-echo mysqli_num_rows($sql1);
-
-?>
+$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM nennungen");
+$statement->execute();  
+$row = $statement->fetch();
+echo "Es wurden ".$row['anzahl']." User gefunden";
+?>    
 	    
 	    
 	    
