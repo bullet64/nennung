@@ -66,9 +66,7 @@
 	    <td><?=$row['teilnehmer_max']?></td>
        <td><?=$row['teilnehmer']?></td>
     
-	  <p><a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a></p>
-	  </tr>
-	  
+	  	  
     <?php endforeach;?>
 	  
 	  
