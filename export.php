@@ -55,6 +55,7 @@ foreach ($pdo->query($sql) as $row) {
         // Schreibe $abfrage in die geöffnete Datei.
         $fp = fopen($filename, 'a'); 
         foreach($abfrage as $values)
+		$csv_komma = (",", ";", $values);
 		fputs($fp, $values."\n"); 
         fclose($fp); 
     } else {
