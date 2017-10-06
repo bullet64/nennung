@@ -44,7 +44,7 @@
 	  </tr>
 	  
     <?php
-	  $sql = "SELECT * FROM veranstaltungen WHERE id = 1 ORDER BY datum";
+	  $sql = "SELECT * FROM veranstaltungen WHERE aktiv = 1 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
     <tr>
@@ -81,7 +81,7 @@ $pdo = null;	?>
 	  </tr>
 	  
     <?php 
-	  $sql = "SELECT * FROM veranstaltungen WHERE id = 0 ORDER BY datum";
+	  $sql = "SELECT * FROM veranstaltungen WHERE  aktiv= 0 ORDER BY datum";
 
 	  foreach ($pdo->query($sql) as $row) : ?>
     <tr>
