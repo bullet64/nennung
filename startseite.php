@@ -97,7 +97,7 @@
 
   </tbody>
 
-</table>
+</table align=center>
 	
 	<table>
 <caption>Passive Veranstaltungen</caption>
