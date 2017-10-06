@@ -23,7 +23,7 @@
 
 	<?php
 $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$sql = "SELECT * FROM veranstaltungen";
+$sql = "SELECT * FROM veranstaltungen ORDER BY datum";
 
 //$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
 //$stmt->execute();
