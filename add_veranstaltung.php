@@ -4,8 +4,10 @@
    <meta charset="utf-8">
    <title>Antwort vom Webserver</title>
 </head>
+	
+<body>
 	<?php include ("connect.php");?>
-<body><p>
+	<p>
    <?php
      
             	
