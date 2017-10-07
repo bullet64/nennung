@@ -15,7 +15,7 @@
       
    
 	$statement = $pdo->prepare("INSERT INTO vereine (verein, bundesland) VALUES (?, ?)");
-      	$statement->execute(array($_POST["verein"] . $_POST["bundesland"]));
+      	$statement->execute(array($_POST["verein"], $_POST["bundesland"]));
 	
 		
 	$pdo = null;
