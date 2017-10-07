@@ -42,10 +42,21 @@
            <td><input name="verein" size="30" type="text" required> *</td>
     </tr>
       
-   <tr>
-           <td>Verein</td>
-           <td><input name="bundesland" size="30" type="text" required> *</td>
-    </tr>      
+     <tr>
+       <td>   
+       <form action="add_verein.php">
+          <label>Land
+        <td><select name="bundesland">
+          <option></option></td>
+           <option>NRW</option>
+          <option>Hessen</option>
+           <option>Bayern</option></td>
+        </select>
+          </label>
+   
+       </td>
+    </tr> 
+ 
       
       <tr>
       <td>&nbsp;</td>
