@@ -152,25 +152,33 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
    <table>
    <caption>Flag Aktiv/Passiv setzen</caption>
       
-      <tr>
-           <td>Verein</td>
-           <td><input name="verein" size="30" type="text" required> *</td>
-    </tr>
-      
-     <tr>
-       <td>   
-       <form action="add_verein.php">
-          <label>Land
-        <td><select name="bundesland">
-          <option></option>
-           <option>NRW</option>
-          <option>Hessen</option>
-           <option>Bayern</option></td>
-        </select>
-          </label>
+      ?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
    
-       </td>
-    </tr> 
+    
+    
+   <table>
+     
+      <tr>
+           <td>Veranstaltung</td>
+    <td><input type="text" name="veranstaltung" list="veranstaltungen" required>
+               <datalist id="veranstaltungen">
+                  <?php
+                  while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
+                 <option value="<?php echo $result ?>" />
+                  <?php
+                    } 
+                 $pdo = null; ?>
+
+               
+               </datalist>
+               *</td>
+      </tr>
+      
+     
         
     <tr>
            <td>Aktiv/Passiv Flag (1/0)</td>
