@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet2.css">
+   <meta charset="utf-8">
+   <title>10. NRW-Cup 2018, Anmeldung BETA v0.1</title>
    
-	<title>Nennsystem</title>
+   
 </head>
+
+<nav>
+   <ul>
+      <li><a href="http://192.168.3.243/nennung/index.php">Home</a></li>
+      <li><a href="http://192.168.3.243/nennung/abfrage.php">Teilnehmerliste</a></li>
+      <li><a href="http://192.168.3.243/nennung/abfrage_h.php">Klasse Hobby</a></li>
+      <li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
+       <li><a href="http://192.168.3.243/nennung/admin.php">Admin</a></li>
+       <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
 <body>
 	
 	<header>
