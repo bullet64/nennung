@@ -36,14 +36,16 @@
     
    <table>
    <caption>Neuen Verein eintragen</caption>
-     
         
-      
-   
     <tr>
            <td>Verein</td>
            <td><input name="verein" size="30" type="text" required> *</td>
     </tr>
+      
+   <tr>
+           <td>Verein</td>
+           <td><input name="bundesland" size="30" type="text" required> *</td>
+    </tr>      
       
       <tr>
       <td>&nbsp;</td>
@@ -59,14 +61,23 @@
     
    <table>
    <caption>Neue Veranstaltung</caption>
-     
         
-      
-   
     <tr>
            <td>Veranstaltung</td>
            <td><input name="veranstaltung" size="30" type="text" required> *</td>
     </tr>
+      
+       <tr>
+           <td>Datum</td>
+           <td><input name="datum" size="30" type="date" required> *</td>
+    </tr>
+      
+       <tr>
+           <td>Max. Teilnehmer</td>
+           <td><input name="teilnehmer_max" size="30" type="text" required> *</td>
+    </tr>
+      
+       
       
       <tr>
       <td>&nbsp;</td>
