@@ -4,9 +4,10 @@
    <meta charset="utf-8">
    <title>Antwort vom Webserver</title>
 </head>
+	<?php include ("connect.php");?>
 <body><p>
    <?php
-      $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+     
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
       
