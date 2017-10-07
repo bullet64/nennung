@@ -14,7 +14,7 @@
       echo "Max. Teilnehmer: "         . htmlspecialchars($_POST["teilnehmer_max"]) . "<br>";
    
 	$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung, datum, teilnehmer_max) VALUES (?, ?, ?)");
-      	$statement->execute(array($_POST["veranstaltung"],$_POST["datum"]$_POST["teilnehmer_max"],));
+      	$statement->execute(array($_POST["veranstaltung"],$_POST["datum"]$_POST["teilnehmer_max"]));
 	
 		
 	$pdo = null;
