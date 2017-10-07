@@ -18,12 +18,7 @@
        <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
 <body>
 	
-	<header>
-	<div id="kopf">
-    <a id="logo" href="index.html"><img src="img/logo.png" title="zurück zur Startseite!" alt="Webseiten Name"  height="48" width="238"></a>
-    <a id="navlink" title="zum Navigationsmenü" href="#mobilenavstart">☰</a>
-    </div>
-</header>
+
 	
 <main role="main">	
 	
@@ -114,21 +109,14 @@ $pdo = null;	?>
   </tbody>
 
 </table>
-    </article><!--content-->
    
- 
-
+   
   
 
 
 	
 </main>  
-<footer>
-    <p>
-    	Design: <a href="http://designenlassen.de/">designenlassen.de</a><br/>
-   		technische Umsetzung: <a href="http://selfhtml.org">selfhtml.org</a>
-    </p>    
-</footer>  
+
 	
 </html>
 
