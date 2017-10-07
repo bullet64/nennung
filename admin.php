@@ -154,11 +154,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     
    <table>
    <caption>Flag Aktiv/Passiv setzen</caption>
-      ?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
-//$stmt->execute();
-?>
+      
      
    
     
