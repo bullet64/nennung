@@ -63,7 +63,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
                  <option><?php echo htmlspecialchars($result) ?></option>
                   <?php
                     } 
-                 $pdo = null; ?>
+                  ?>
                 
              </select>
       </label>
@@ -119,7 +119,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       
       
   <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+
 $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC");
 //$stmt->execute();
 ?>
