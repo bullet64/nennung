@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>Antwort vom Webserver</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<meta charset="utf-8">
+        <title>10. NRW-Cup 2018, Anmeldung</title>
 </head>
 	
 <nav>
    <ul>
       <li><a href="http://192.168.3.243/nennung/index.php">Home</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage.php">Teilnehmerliste</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage_h.php">Klasse Hobby</a></li>
-      <li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
-       <li><a href="http://192.168.3.243/nennung/admin.php">Admin</a></li>
-       <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
-      <li><a href="http://192.168.3.243/nennung/startseite.php">Übersicht</a></li>
-          
-              
+                   
   </ul>
 </nav>
 	
