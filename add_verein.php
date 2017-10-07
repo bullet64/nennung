@@ -4,9 +4,11 @@
    <meta charset="utf-8">
    <title>Antwort vom Webserver</title>
 </head>
-<body><p>
+<body>
+	<?php include ("connect.php");?>
+	<p>
    <?php
-      $pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+      
             	
       echo "Verein: "           . htmlspecialchars($_POST["verein"]) . "<br>";
       
