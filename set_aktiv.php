@@ -11,11 +11,11 @@
    <?php
      
             	
-      echo "Aktiv: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
-      
+      echo "Veranstaltung: "   . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
+      echo "Aktiv: "           . htmlspecialchars($_POST["aktiv"]) . "<br>";     
    
-	$statement = $pdo->prepare("INSERT INTO veranstaltungen (sktiv) VALUES (?)");
-      	$statement->execute(array($_POST["aktiv"]));
+	$statement = $pdo->prepare("UPDATE veranstaltungen SET aktiv = ? WHERE veranstaltung = ?");
+      	$statement->execute(array($_POST["veranstaltung"], $_POST["aktiv"]));
 	
 		
 	$pdo = null;
