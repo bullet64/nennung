@@ -153,7 +153,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
    <caption>Flag Aktiv/Passiv setzen</caption>
         
     <tr>
-           <td></td>
+           <td>Flag Aktiv/Passiv</td>
            <td><input name="aktiv" size="2" type="checkbox" required> *</td>
     </tr>
       
