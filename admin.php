@@ -147,5 +147,26 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
 
  </form> 
    
+      <form id="idForm" method="post" action="set_aktiv.php">
+    
+   <table>
+   <caption>Flag Aktiv/Passiv setzen</caption>
+        
+    <tr>
+           <td></td>
+           <td><input name="aktiv" size="2" type="checkbox" required> *</td>
+    </tr>
+      
+      
+      <tr>
+      <td>&nbsp;</td>
+      <td colspan="3"><input type="submit" value="Absenden">
+      <input type="reset" value="Löschen">
+   </tr>
+   
+ </table>
+
+ </form> 
+      
 </body>
 </html>
