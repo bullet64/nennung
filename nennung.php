@@ -13,7 +13,8 @@
   </ul>
 </nav>
 	
-<body><p>
+	<body>
+		<p> Diese Daten haben wir von dir erhalten!</p>
    <?php
 	
       error_reporting(E_ALL);
