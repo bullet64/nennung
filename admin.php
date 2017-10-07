@@ -47,7 +47,7 @@
        <form action="add_verein.php">
           <label>Land
         <td><select name="bundesland">
-          <option></option></td>
+          <option></option>
            <option>NRW</option>
           <option>Hessen</option>
            <option>Bayern</option></td>
