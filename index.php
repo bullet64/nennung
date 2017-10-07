@@ -48,7 +48,7 @@
    
    <?php
 
-$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen WHERE aktiv = 1 ORDER BY veranstaltung ASC");
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen WHERE aktiv = 1 AND teilnehmer < teilnehmer_max ORDER BY veranstaltung ASC");
 //$stmt->execute();
 ?>
       
