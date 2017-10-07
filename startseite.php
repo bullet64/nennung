@@ -8,6 +8,7 @@
    
 </head>
 
+
 <nav>
    <ul>
       <li><a href="http://192.168.3.243/nennung/index.php">Home</a></li>
@@ -20,7 +21,12 @@
 	</nav>
 	
 <body>
-	
+	<p style="text-align:center">
+   <b>Nennsytem für RC-Car Rennen</b>
+   </p>
+
+   <p style="text-align:center">Die Startgebühr ist <b>VOR</b> dem Wettkampftag zu entrichten.</br>
+    Dazu bitte die Ausschreibung des jeweiligen Vereines beachten!</p>
 
 	
 
