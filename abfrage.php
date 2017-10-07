@@ -24,7 +24,7 @@ $sql = "SELECT * FROM nennungen";
 ?>
 
 
-<table>
+<table align=center>
 <caption>Teilnehmerliste</caption>
   <tbody>
 	  <tr>
