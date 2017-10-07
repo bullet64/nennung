@@ -151,6 +151,26 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
     
    <table>
    <caption>Flag Aktiv/Passiv setzen</caption>
+      
+      <tr>
+           <td>Verein</td>
+           <td><input name="verein" size="30" type="text" required> *</td>
+    </tr>
+      
+     <tr>
+       <td>   
+       <form action="add_verein.php">
+          <label>Land
+        <td><select name="bundesland">
+          <option></option>
+           <option>NRW</option>
+          <option>Hessen</option>
+           <option>Bayern</option></td>
+        </select>
+          </label>
+   
+       </td>
+    </tr> 
         
     <tr>
            <td>Aktiv/Passiv Flag (1/0)</td>
