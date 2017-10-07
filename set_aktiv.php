@@ -15,7 +15,7 @@
       echo "Aktiv: "           . htmlspecialchars($_POST["aktiv"]) . "<br>";     
    
 	$statement = $pdo->prepare("UPDATE veranstaltungen SET aktiv = ? WHERE veranstaltung = ?");
-      	$statement->execute(array($_POST["veranstaltung"], $_POST["aktiv"]));
+      	$statement->execute(array($_POST["aktiv"], $_POST["veranstaltung"]));
 	
 		
 	$pdo = null;
