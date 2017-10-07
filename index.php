@@ -23,6 +23,9 @@
 </nav>
 
 <body>
+   
+   <?php include ("connect.php");?>
+   
    <p style="text-align:center">
    <b>Nennsytem für RC-Car Rennen</b>
    </p>
@@ -44,7 +47,7 @@
       
    
    <?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+
 $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
 //$stmt->execute();
 ?>
