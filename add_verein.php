@@ -11,10 +11,11 @@
       
             	
       echo "Verein: "           . htmlspecialchars($_POST["verein"]) . "<br>";
+      echo "Bundesland: "       . htmlspecialchars($_POST["bundesland"]) . "<br>";	
       
    
-	$statement = $pdo->prepare("INSERT INTO vereine (verein) VALUES (?)");
-      	$statement->execute(array($_POST["verein"]));
+	$statement = $pdo->prepare("INSERT INTO vereine (verein, bundesland) VALUES (?, ?)");
+      	$statement->execute(array($_POST["verein"] . $_POST["verein"]));
 	
 		
 	$pdo = null;
