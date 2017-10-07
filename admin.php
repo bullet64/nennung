@@ -85,7 +85,7 @@
       
        <tr>
            <td>Max. Teilnehmer</td>
-           <td><input name="teilnehmer_max" size="30" type="text" required> *</td>
+           <td><input pattern="^[0-9]{3}$" name="teilnehmer_max" size="10" type="number" required> *</td>
     </tr>
       
        
