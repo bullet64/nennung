@@ -147,18 +147,18 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
 
  </form> 
    
-       ?php
-$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
-$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
-//$stmt->execute();
-?>
+       
       
       
       <form id="idForm" method="post" action="set_aktiv.php">
     
    <table>
    <caption>Flag Aktiv/Passiv setzen</caption>
-      
+      ?php
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
+$stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
+//$stmt->execute();
+?>
      
    
     
