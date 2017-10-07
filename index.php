@@ -57,7 +57,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen WHERE aktiv = 1 A
        <form action="nennung.php">
           <label>Veranstaltung
         <td><select name="veranstaltung">
-           <option></option>
+           
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
@@ -129,7 +129,7 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
        <form action="nennung.php">
           <label>Verein
         <td><select name="verein">
-           <option></option>
+           
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
