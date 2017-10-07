@@ -10,10 +10,11 @@
      
             	
       echo "Veranstaltung: "           . htmlspecialchars($_POST["veranstaltung"]) . "<br>";
-      
+      echo "Datum: "                   . htmlspecialchars($_POST["datum"]) . "<br>";
+      echo "Max. Teilnehmer: "         . htmlspecialchars($_POST["teilnehmer_max"]) . "<br>";
    
-	$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung) VALUES (?)");
-      	$statement->execute(array($_POST["veranstaltung"]));
+	$statement = $pdo->prepare("INSERT INTO veranstaltungen (veranstaltung, datum, teilnehmer_max) VALUES (?, ?, ?)");
+      	$statement->execute(array($_POST["veranstaltung"],$_POST["datum"]$_POST["teilnehmer_max"],));
 	
 		
 	$pdo = null;
