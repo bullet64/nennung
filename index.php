@@ -16,13 +16,12 @@
       <li><a href="http://192.168.3.243/nennung/abfrage_t.php">Klasse Top</a></li>
        <li><a href="http://192.168.3.243/nennung/admin.php">Admin</a></li>
        <li><a href="http://192.168.3.243/nennung/export.php">RCM Export</a></li>
-        <li><a href="http://192.168.3.243/nennung/startseite.php">Übersicht</a></li>   
+          
               
   </ul>
 </nav>
 
 <body>
-   <?php include ("connect.php");?>
    <p style="text-align:center">
    <b>Nennsytem für RC-Car Rennen</b>
    </p>
@@ -44,7 +43,7 @@
       
    
    <?php
-
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veranstaltung ASC");
 //$stmt->execute();
 ?>
@@ -58,9 +57,9 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
-                  
+                  <?php
                     } 
-                 ?>
+                 $pdo = null; ?>
                 
              </select>
       </label>
@@ -116,7 +115,7 @@ $stmt = $pdo->query("SELECT veranstaltung FROM veranstaltungen ORDER BY veransta
       
       
   <?php
-
+$pdo = new PDO('mysql:host=localhost;dbname=nennung', 'bullet64', 'xt19Zkl');
 $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC");
 //$stmt->execute();
 ?>
@@ -130,9 +129,9 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
             <?php
                   while($result = $stmt->fetch(PDO::FETCH_COLUMN, 0)) { ?>
                  <option><?php echo htmlspecialchars($result) ?></option>
-                  
+                  <?php
                     } 
-                 ?>
+                 $pdo = null; ?>
                 
              </select>
       </label>
@@ -196,6 +195,5 @@ $stmt = $pdo->query("SELECT verein,bundesland FROM vereine ORDER BY verein ASC")
  </table>
 
  </form> 
-         <?php $pdo = null; ?>
 </body>
 </html>
